@@ -5,25 +5,25 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Simple Heliocentric Model</Name>
-			<File>ssm/simpleSolarSystem.swf</File>
-			<Width>450</Width>
-			<Height>450</Height>
+			<File>ssm/animations/simpleSolarSystem.swf</File>
+			<Width>580</Width>
+			<Height>580</Height>
 		</SWF>
 		<SWF>
 			<Name>Elongation for Inferior Planet</Name>
-			<File>ssm/elong-good3.swf</File>
+			<File>ssm/animations/elong-good3.swf</File>
 			<Width>300</Width>
 			<Height>300</Height>
 		</SWF>
 		<SWF>
 			<Name>Elongation for Superior Planet</Name>
-			<File>ssm/elong-good2.swf</File>
+			<File>ssm/animations/elong-good2.swf</File>
 			<Width>300</Width>
 			<Height>300</Height>
 		</SWF>
 		<SWF>
 			<Name>Synodic Period Calculator</Name>
-			<File>ssm/SynodicCalculator4.swf</File>
+			<File>ssm/animations/SynodicCalculator4.swf</File>
 			<Width>300</Width>
 			<Height>300</Height>
 		</SWF>
@@ -31,13 +31,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Ptolemaic System Simulator</Name>
-			<File>ssm/ptolemaic.swf</File>
+			<File>ssm/animations/ptolemaic.swf</File>
 			<Width>940</Width>
 			<Height>710</Height>
 		</SWF>
 		<SWF>
 			<Name>Planetary Configurations Simulator</Name>
-			<File>ssm/configurationsSimulator.swf</File>
+			<File>ssm/animations/configurationsSimulator.swf</File>
 			<Width>850</Width>
 			<Height>680</Height>
 		</SWF>
@@ -48,45 +48,45 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Meridians</Name>
-			<File>motion1/coord.swf</File>
+			<File>motion1/animations/coord.swf</File>
 			<Width>150</Width>
 			<Height>150</Height>
 			<Flashvars>numLon=11</Flashvars>
 		</SWF>
 		<SWF>
 			<Name>Parallels of Latitude</Name>
-			<File>motion1/coord.swf</File>
+			<File>motion1/animations/coord.swf</File>
 			<Width>150</Width>
 			<Height>150</Height>
 			<Flashvars>numLat=9</Flashvars>
 		</SWF>
 		<SWF>
 			<Name>Sexagesimal Calculator</Name>
-			<File>motion1/sexagesimalCalculator.swf</File>
+			<File>motion1/animations/sexagesimalCalculator.swf</File>
 			<Width>400</Width>
 			<Height>80</Height>
 		</SWF>
 		<SWF>
 			<Name>Finding Latitude</Name>
-			<File>motion1/latAngleDemo.swf</File>
+			<File>motion1/animations/latAngleDemo.swf</File>
 			<Width>185</Width>
 			<Height>245</Height>
 		</SWF>
 		<SWF>
 			<Name>Celestial System Demo</Name>
-			<File>motion1/cec_demo.swf</File>
-			<Width>340</Width>
-			<Height>300</Height>
+			<File>motion1/animations/cec_demo.swf</File>
+			<Width>450</Width>
+			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Sun at Noon</Name>
-			<File>motion1/sunpath.swf</File>
+			<File>motion1/animations/sunpath.swf</File>
 			<Width>300</Width>
 			<Height>250</Height>
 		</SWF>
 		<SWF>
 			<Name>Light Rays and Angle of Incidence</Name>
-			<File>motion1/rays.swf</File>
+			<File>motion1/animations/rays.swf</File>
 			<Width>760</Width>
 			<Height>340</Height>
 		</SWF>
@@ -94,31 +94,31 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Flat Map Explorer</Name>
-			<File>motion1/tc_flat.swf</File>
+			<File>motion1/animations/tc_flat.swf</File>
 			<Width>850</Width>
 			<Height>580</Height>
 		</SWF>
 		<SWF>
 			<Name>Globe Explorer</Name>
-			<File>motion1/tc_globe.swf</File>
+			<File>motion1/animations/tc_globe.swf</File>
 			<Width>650</Width>
 			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Flat Sky Map Explorer</Name>
-			<File>motion1/cec_flat.swf</File>
+			<File>motion1/animations/cec_flat.swf</File>
 			<Width>850</Width>
 			<Height>580</Height>
 		</SWF>
 		<SWF>
 			<Name>Sky Map Explorer</Name>
-			<File>motion1/cec_sky.swf</File>
+			<File>motion1/animations/cec_sky.swf</File>
 			<Width>850</Width>
 			<Height>560</Height>
 		</SWF>
 		<SWF>
 			<Name>Seasons and Ecliptic Simulator</Name>
-			<File>motion1/seasons_ecliptic.swf</File>
+			<File>motion1/animations/seasons_ecliptic.swf</File>
 			<Width>970</Width>
 			<Height>710</Height>
 		</SWF>
@@ -129,25 +129,25 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Horizon System Demo</Name>
-			<File>motion2/horizon_coord.swf</File>
-			<Width>350</Width>
-			<Height>280</Height>
+			<File>motion2/animations/horizon_coord.swf</File>
+			<Width>450</Width>
+			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Celestial and Horizon System Switching</Name>
-			<File>motion2/ce_hc_convert.swf</File>
+			<File>motion2/animations/ce_hc_convert.swf</File>
 			<Width>400</Width>
 			<Height>500</Height>
 		</SWF>
 		<SWF>
 			<Name>Star Paths Demo</Name>
-			<File>motion2/declination_ranges.swf</File>
+			<File>motion2/animations/declination_ranges.swf</File>
 			<Width>400</Width>
 			<Height>500</Height>
 		</SWF>
 		<SWF>
 			<Name>Locations of Objects in the Sky</Name>
-			<File>motion2/skyBandSimulator.swf</File>
+			<File>motion2/animations/skyBandSimulator.swf</File>
 			<Width>300</Width>
 			<Height>450</Height>
 		</SWF>
@@ -155,13 +155,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Rotating Sky Explorer</Name>
-			<File>motion2/ce_hc.swf</File>
+			<File>motion2/animations/ce_hc.swf</File>
 			<Width>900</Width>
 			<Height>710</Height>
 		</SWF>
 		<SWF>
 			<Name>Sidereal Time and Hour Angle Demo</Name>
-			<File>motion2/siderealTimeAndHourAngleDemo.swf</File>
+			<File>motion2/animations/siderealTimeAndHourAngleDemo.swf</File>
 			<Width>850</Width>
 			<Height>470</Height>
 		</SWF>
@@ -172,19 +172,19 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Zodiac Explorer</Name>
-			<File>motion3/zodiac.swf</File>
-			<Width>450</Width>
-			<Height>450</Height>
+			<File>motion3/animations/zodiac016.swf</File>
+			<Width>800</Width>
+			<Height>650</Height>
 		</SWF>
 		<SWF>
 			<Name>Meridianal Altitude Calculator</Name>
-			<File>motion3/meridional_calculator.swf</File>
+			<File>motion3/animations/meridional_calculator.swf</File>
 			<Width>400</Width>
 			<Height>515</Height>
 		</SWF>
 		<SWF>
 			<Name>Sun Paths Demo</Name>
-			<File>motion3/sunPathSimulator.swf</File>
+			<File>motion3/animations/sunPathSimulator.swf</File>
 			<Width>300</Width>
 			<Height>500</Height>
 		</SWF>
@@ -192,13 +192,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Sidereal and Solar Time Simulator</Name>
-			<File>motion3/siderealSolarTime.swf</File>
+			<File>motion3/animations/siderealSolarTime.swf</File>
 			<Width>980</Width>
 			<Height>570</Height>
 		</SWF>
 		<SWF>
 			<Name>Motions of the Sun Simulator</Name>
-			<File>motion3/sunmotions.swf</File>
+			<File>motion3/animations/sunmotions.swf</File>
 			<Width>950</Width>
 			<Height>680</Height>
 		</SWF>
@@ -209,7 +209,7 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Eccentricity Demo</Name>
-			<File>pos/ellipsedemo.swf</File>
+			<File>pos/animations/ellipsedemo.swf</File>
 			<Width>400</Width>
 			<Height>220</Height>
 		</SWF>
@@ -217,7 +217,7 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Planetary Orbit Simulator</Name>
-			<File>pos/kepler.swf</File>
+			<File>pos/animations/kepler.swf</File>
 			<Width>900</Width>
 			<Height>710</Height>
 		</SWF>
@@ -228,25 +228,25 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Time of Day Demo</Name>
-			<File>lps/timeOfDay.swf</File>
+			<File>lps/animations/timeOfDay.swf</File>
 			<Width>470</Width>
 			<Height>225</Height>
 		</SWF>
 		<SWF>
 			<Name>Rising and Setting Demo</Name>
-			<File>lps/risingSetting.swf</File>
+			<File>lps/animations/risingSetting.swf</File>
 			<Width>640</Width>
 			<Height>470</Height>
 		</SWF>
 		<SWF>
 			<Name>Celestial Sphere Labels</Name>
-			<File>lps/celestialSphereLabels.swf</File>
+			<File>lps/animations/celestialSphereLabels.swf</File>
 			<Width>350</Width>
 			<Height>420</Height>
 		</SWF>
 		<SWF>
 			<Name>Horizon Diagram Example</Name>
-			<File>lps/eduHorizonDiagram.swf</File>
+			<File>lps/animations/eduHorizonDiagram.swf</File>
 			<Width>450</Width>
 			<Height>230</Height>
 		</SWF>
@@ -254,19 +254,19 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Moon Bisector Demo</Name>
-			<File>lps/moonBisectorDemo.swf</File>
+			<File>lps/animations/moonBisectorDemo.swf</File>
 			<Width>900</Width>
 			<Height>644</Height>
 		</SWF>
 		<SWF>
 			<Name>Lunar Phase Simulator</Name>
-			<File>lps/lps.swf</File>
+			<File>lps/animations/lps.swf</File>
 			<Width>840</Width>
 			<Height>680</Height>
 		</SWF>
 		<SWF>
 			<Name>Moon Phases and the Horizon Diagram</Name>
-			<File>lps/moonPhasesHorizonDiagram.swf</File>
+			<File>lps/animations/moonPhasesHorizonDiagram.swf</File>
 			<Width>750</Width>
 			<Height>465</Height>
 		</SWF>
@@ -277,7 +277,7 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Blackbody Curves</Name>
-			<File>blackbody/blackbody_old.swf</File>
+			<File>blackbody/animations/blackbody_old.swf</File>
 			<Width>700</Width>
 			<Height>460</Height>
 		</SWF>
@@ -285,13 +285,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Light and Filters Simulator</Name>
-			<File>blackbody/filters.swf</File>
+			<File>blackbody/animations/filters.swf</File>
 			<Width>980</Width>
 			<Height>710</Height>
 		</SWF>
 		<SWF>
 			<Name>Blackbody Curves and Filters Explorer</Name>
-			<File>blackbody/blackbody.swf</File>
+			<File>blackbody/animations/blackbody.swf</File>
 			<Width>950</Width>
 			<Height>550</Height>
 		</SWF>
@@ -302,7 +302,7 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Thermal Distribution Demo</Name>
-			<File>hydrogen/thermal_distribution.swf</File>
+			<File>hydrogen/animations/thermal_distribution.swf</File>
 			<Width>400</Width>
 			<Height>500</Height>
 		</SWF>
@@ -310,7 +310,7 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Hydrogen Atom Simulator</Name>
-			<File>hydrogen/hydrogen_atom.swf</File>
+			<File>hydrogen/animations/hydrogen_atom.swf</File>
 			<Width>950</Width>
 			<Height>640</Height>
 		</SWF>
@@ -321,21 +321,21 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Star Color Demo</Name>
-			<File>hr/starColorSlider.swf</File>
-			<Width>220</Width>
-			<Height>470</Height>
+			<File>hr/animations/starColorSlider.swf</File>
+			<Width>470</Width>
+			<Height>220</Height>
 		</SWF>
 		<SWF>
 			<Name>Stellar Luminosity Calculator</Name>
-			<File>hr/stellarluminosity.swf</File>
-			<Width>450</Width>
-			<Height>300</Height>
+			<File>hr/animations/stellarluminosity.swf</File>
+			<Width>600</Width>
+			<Height>400</Height>
 		</SWF>
 	</BackgroundSWFs>
 	<MainSWFs>
 		<SWF>
 			<Name>Hertzsprung-Russell Diagram Explorer</Name>
-			<File>hr/hrExplorer.swf</File>
+			<File>hr/animations/hrExplorer.swf</File>
 			<Width>805</Width>
 			<Height>665</Height>
 		</SWF>
@@ -346,31 +346,25 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Center of Mass Demo</Name>
-			<File>ebs/centerofmass.swf</File>
+			<File>ebs/animations/centerofmass.swf</File>
 			<Width>500</Width>
 			<Height>370</Height>
 		</SWF>
 		<SWF>
 			<Name>Stellar Luminosity Calculator</Name>
-			<File>ebs/stellarluminosity.swf</File>
-			<Width>450</Width>
-			<Height>300</Height>
-		</SWF>
-		<SWF>
-			<Name></Name>
-			<File>,circles.swf/325</File>
-			<Width>240</Width>
-			<Height>,The Luminosity of Eclipsing Binary Systems</Height>
+			<File>ebs/animations/stellarluminosity.swf</File>
+			<Width>600</Width>
+			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Eclipsing Stars Demo</Name>
-			<File>ebs/stars.swf</File>
-			<Width>450</Width>
-			<Height>300</Height>
+			<File>ebs/animations/stars.swf</File>
+			<Width>600</Width>
+			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Lightcurve Demo</Name>
-			<File>ebs/lightcurve.swf</File>
+			<File>ebs/animations/lightcurve.swf</File>
 			<Width>800</Width>
 			<Height>600</Height>
 		</SWF>
@@ -378,7 +372,7 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Eclipsing Binary Simulator</Name>
-			<File>ebs/ebs.swf</File>
+			<File>ebs/animations/ebs.swf</File>
 			<Width>817</Width>
 			<Height>710</Height>
 		</SWF>
@@ -389,28 +383,28 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Projectile Motion Simulator</Name>
-			<File>atmosphere/projectile.swf</File>
+			<File>atmosphere/animations/projectile.swf</File>
 			<Width>680</Width>
 			<Height>445</Height>
 		</SWF>
 		<SWF>
 			<Name>Maxwell Distribution Simulator</Name>
-			<File>atmosphere/MBDDemo.swf</File>
-			<Width>700</Width>
-			<Height>308</Height>
+			<File>atmosphere/animations/MBDDemo.swf</File>
+			<Width>925</Width>
+			<Height>395</Height>
 		</SWF>
 	</BackgroundSWFs>
 	<MainSWFs>
 		<SWF>
 			<Name>Gas Retention Simulator</Name>
-			<File>atmosphere/gasRetentionSimulator.swf</File>
+			<File>atmosphere/animations/gasRetentionSimulator.swf</File>
 			<Width>900</Width>
 			<Height>650</Height>
 		</SWF>
 		<SWF>
 			<Name>Gas Retention Plot</Name>
-			<File>atmosphere/gasRetentionPlot.swf</File>
-			<Width>800</Width>
+			<File>atmosphere/animations/gasRetentionPlot.swf</File>
+			<Width>880</Width>
 			<Height>660</Height>
 		</SWF>
 	</MainSWFs>
@@ -420,25 +414,25 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Center of Mass Demo</Name>
-			<File>esp/centerofmass.swf</File>
+			<File>esp/animations/centerofmass.swf</File>
 			<Width>500</Width>
 			<Height>370</Height>
 		</SWF>
 		<SWF>
 			<Name>Doppler Shift Demo</Name>
-			<File>esp/dopplerShiftDemo.swf</File>
+			<File>esp/animations/dopplerShiftDemo.swf</File>
 			<Width>750</Width>
 			<Height>322</Height>
 		</SWF>
 		<SWF>
 			<Name>Star Wobble Demo</Name>
-			<File>esp/ca_starwobble.swf</File>
+			<File>esp/animations/ca_starwobble.swf</File>
 			<Width>780</Width>
 			<Height>420</Height>
 		</SWF>
 		<SWF>
 			<Name>Radial Velocity Demo</Name>
-			<File>esp/exoplanetComboDiagram.swf</File>
+			<File>esp/animations/exoplanetComboDiagram.swf</File>
 			<Width>650</Width>
 			<Height>300</Height>
 		</SWF>
@@ -446,13 +440,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Exoplanet Radial Velocity Simulator</Name>
-			<File>esp/radialVelocitySimulator.swf</File>
+			<File>esp/animations/radialVelocitySimulator.swf</File>
 			<Width>920</Width>
 			<Height>680</Height>
 		</SWF>
 		<SWF>
 			<Name>Exoplanet Transit Simulator</Name>
-			<File>esp/transitSimulator.swf</File>
+			<File>esp/animations/transitSimulator.swf</File>
 			<Width>920</Width>
 			<Height>650</Height>
 		</SWF>
@@ -463,13 +457,13 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Pulsating Star Visualization</Name>
-			<File>vsp/pulsatingstar.swf</File>
+			<File>vsp/animations/pulsatingstar.swf</File>
 			<Width>150</Width>
 			<Height>150</Height>
 		</SWF>
 		<SWF>
 			<Name>CCD Imaging Demo</Name>
-			<File>vsp/CCDMiniSim.swf</File>
+			<File>vsp/animations/CCDMiniSim.swf</File>
 			<Width>400</Width>
 			<Height>640</Height>
 		</SWF>
@@ -477,25 +471,25 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Registration Simulator</Name>
-			<File>vsp/registrationSimulator.swf</File>
+			<File>vsp/animations/registrationSimulator.swf</File>
 			<Width>850</Width>
 			<Height>475</Height>
 		</SWF>
 		<SWF>
 			<Name>Blink Comparator Simulator</Name>
-			<File>vsp/blinkComparatorSimulator.swf</File>
+			<File>vsp/animations/blinkComparatorSimulator.swf</File>
 			<Width>800</Width>
 			<Height>400</Height>
 		</SWF>
 		<SWF>
 			<Name>Photometry Simulator</Name>
-			<File>vsp/photometrySimulator.swf</File>
+			<File>vsp/animations/photometrySimulator.swf</File>
 			<Width>850</Width>
 			<Height>600</Height>
 		</SWF>
 		<SWF>
 			<Name>Variable Star Photometry Analyzer</Name>
-			<File>vsp/variableStarPhotometryAnalyzer.swf</File>
+			<File>vsp/animations/variableStarPhotometryAnalyzer.swf</File>
 			<Width>900</Width>
 			<Height>715</Height>
 		</SWF>
@@ -506,13 +500,13 @@
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Radar Pulse Demo</Name>
-			<File>distance/Pulse.swf</File>
+			<File>distance/animations/Pulse.swf</File>
 			<Width>480</Width>
 			<Height>640</Height>
 		</SWF>
 		<SWF>
 			<Name>Parallax Diagram</Name>
-			<File>distance/parallaxDiagram.swf</File>
+			<File>distance/animations/parallaxDiagram.swf</File>
 			<Width>720</Width>
 			<Height>380</Height>
 		</SWF>
@@ -520,25 +514,25 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Parallax Explorer</Name>
-			<File>distance/parallaxExplorer.swf</File>
+			<File>distance/animations/parallaxExplorer.swf</File>
 			<Width>800</Width>
 			<Height>605</Height>
 		</SWF>
 		<SWF>
 			<Name>Spectroscopic Parallax Simulator</Name>
-			<File>distance/spectroParallax.swf</File>
+			<File>distance/animations/spectroParallax.swf</File>
 			<Width>870</Width>
 			<Height>600</Height>
 		</SWF>
 		<SWF>
 			<Name>HR Diagram Star Cluster Fitting Explorer</Name>
-			<File>distance/clusterFittingExplorer.swf</File>
+			<File>distance/animations/clusterFittingExplorer.swf</File>
 			<Width>800</Width>
 			<Height>550</Height>
 		</SWF>
 		<SWF>
 			<Name>Supernova Light Curve Fitting Explorer</Name>
-			<File>distance/snCurveExplorer.swf</File>
+			<File>distance/animations/snCurveExplorer.swf</File>
 			<Width>650</Width>
 			<Height>620</Height>
 		</SWF>
@@ -551,13 +545,13 @@
 	<MainSWFs>
 		<SWF>
 			<Name>Circumstellar Habitable Zone Simulator</Name>
-			<File>habitablezones/stellarHabitableZone.swf</File>
+			<File>habitablezones/animations/stellarHabitableZone.swf</File>
 			<Width>980</Width>
 			<Height>765</Height>
 		</SWF>
 		<SWF>
 			<Name>Milky Way Habitability Explorer</Name>
-			<File>habitablezones/milkyWayHabitability.swf</File>
+			<File>habitablezones/animations/milkyWayHabitability.swf</File>
 			<Width>860</Width>
 			<Height>700</Height>
 		</SWF>
