@@ -46,6 +46,11 @@
 <Lab id="motion1">
 	<Name>Basic Coordinates and Seasons</Name>
 	<BackgroundSWFs>
+
+<!--
+
+These two require initialization parameters.
+
 		<SWF>
 			<Name>Meridians</Name>
 			<File>motion1/animations/coord.swf</File>
@@ -60,6 +65,8 @@
 			<Height>150</Height>
 			<Flashvars>numLat=9</Flashvars>
 		</SWF>
+-->
+
 		<SWF>
 			<Name>Sexagesimal Calculator</Name>
 			<File>motion1/animations/sexagesimalCalculator.swf</File>
@@ -458,8 +465,8 @@
 		<SWF>
 			<Name>Pulsating Star Visualization</Name>
 			<File>vsp/animations/pulsatingstar.swf</File>
-			<Width>150</Width>
-			<Height>150</Height>
+			<Width>350</Width>
+			<Height>350</Height>
 		</SWF>
 		<SWF>
 			<Name>CCD Imaging Demo</Name>
@@ -498,12 +505,21 @@
 <Lab id="distance">
 	<Name>Cosmic Distance Ladder</Name>
 	<BackgroundSWFs>
+
+<!--
+
+The dimensions are not correct.
+Also, this demo does not seem to work in AIR.
+
 		<SWF>
 			<Name>Radar Pulse Demo</Name>
 			<File>distance/animations/Pulse.swf</File>
 			<Width>480</Width>
 			<Height>640</Height>
 		</SWF>
+
+-->
+
 		<SWF>
 			<Name>Parallax Diagram</Name>
 			<File>distance/animations/parallaxDiagram.swf</File>
