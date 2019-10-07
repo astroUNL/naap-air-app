@@ -8,7 +8,7 @@
 <supportedProfiles>desktop extendedDesktop</supportedProfiles>
 <architecture>64</architecture>
 <initialWindow>
-<title>NAAP v0.2 BETA</title>
+<title>NAAP Labs - v0.2 BETA</title>
 <content>main.swf</content>
 <width>900</width>
 <height>650</height>
