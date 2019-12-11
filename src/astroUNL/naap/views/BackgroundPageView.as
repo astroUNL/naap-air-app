@@ -55,12 +55,20 @@ package astroUNL.naap.views {
 		
 		protected var _scrollerMargin:Number = 10;
 		
+		// The purpose of the _mouseOverlay layer is to prevent halting behavior when the mouse
+		//	rolls over interactive areas of the background page (e.g. selectable text blocks) during scrolling.
+		// The mouse overlay is transparent and usually not visible (therefore allowing interactivity on the
+		//	background page). When scrolling occurs it is made *visible* (but still transparent), blocking
+		//	interactivity.
+		protected var _mouseOverlay:Sprite;
+		
 		public function BackgroundPageView() {
 			
 			// _content is the permanent container for background page SWFs. When a new
 			// page is loaded reset is called, removing and unloading all of its children.
 			
-			scroller.addEventListener("scroll", onScroll);			
+			scroller.addEventListener("scroll", onScroll);
+			scroller.addEventListener("mouseDown", onMouseDownOnScroller);
 			
 			_content = new Sprite();
 			addChild(_content);
@@ -70,8 +78,54 @@ package astroUNL.naap.views {
 			
 			_content.mask = _contentMask;
 			
-			//_scroller = new Scroller();
-			//addChild(_scroller);
+			_mouseOverlay = new Sprite();
+			_mouseOverlay.visible = false;
+			_mouseOverlay.addEventListener("mouseDown", onMouseDownOnMouseOverlay);
+			addChild(_mouseOverlay);
+			
+		}
+		
+		
+		protected var _stageMouseUpListenerActive:Boolean = false;
+		
+		protected function onMouseDownOnScroller(evt:Event):void {
+			// Activate the mouse overlay.
+			//trace("onMouseDownOnScroller");
+			_mouseOverlay.visible = true;
+			if (!_stageMouseUpListenerActive) {
+				try {	
+					stage.addEventListener("mouseUp", onMouseUpFromStage);
+					_stageMouseUpListenerActive = true;
+				} catch (e:Error) {
+					trace("ERROR");
+				}
+			}
+		}
+		
+		protected function onMouseUpFromStage(evt:Event):void {
+			// Deactivate the mouse overlay.
+			//trace("onMouseUpFromStage");
+			deactivateStageMouseUpListener();
+		}
+		
+		protected function onMouseDownOnMouseOverlay(evt:Event):void {
+			// This is a fail-safe in case the overlay is still visible
+			//	when scrolling has stopped (maybe if another program 
+			//	interrupts?).
+			trace("*** WARNING *** onMouseDownOnMouseOverlay");
+			deactivateStageMouseUpListener();
+		}
+		
+		protected function deactivateStageMouseUpListener():void {
+			_mouseOverlay.visible = false;
+			if (_stageMouseUpListenerActive) {
+				try {
+					stage.removeEventListener("mouseUp", onMouseUpFromStage);
+					_stageMouseUpListenerActive = false;
+				} catch (e:Error) {
+					trace("ERROR");
+				}
+			}
 		}
 		
 		
@@ -211,6 +265,11 @@ package astroUNL.naap.views {
 			_contentMask.graphics.beginFill(0xe0ffa0);
 			_contentMask.graphics.drawRect(0, 0, contentAvailableWindowWidth, _viewHeight);
 			_contentMask.graphics.endFill();
+			
+			_mouseOverlay.graphics.clear();
+			_mouseOverlay.graphics.beginFill(0x0000ff, 0);
+			_mouseOverlay.graphics.drawRect(0, 0, contentAvailableWindowWidth, _viewHeight);
+			_mouseOverlay.graphics.endFill();			
 			
 			updateScroller(savedPosition);
 		}
