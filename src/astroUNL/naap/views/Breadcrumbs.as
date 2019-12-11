@@ -2,7 +2,7 @@
 Breadcrumbs.as
 naap-air-app
 astro.unl.edu
-2019-11-21
+2019-12-11
 */
 
 package astroUNL.naap.views {
@@ -10,7 +10,7 @@ package astroUNL.naap.views {
 	import astroUNL.naap.data.Lab;
 	import astroUNL.naap.events.StateChangeRequestEvent;
 	
-	import astroUNL.classaction.browser.views.elements.ClickableText;
+	import astroUNL.naap.views.ClickableText;
 	
 	import astroUNL.utils.logger.Logger;	
 	

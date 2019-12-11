@@ -2,7 +2,7 @@
 RootView.as
 naap-air-app
 astro.unl.edu
-2019-11-21
+2019-12-11
 */
 
 package astroUNL.naap.views {
@@ -11,7 +11,8 @@ package astroUNL.naap.views {
 	import astroUNL.naap.events.StateChangeRequestEvent;
 	
 	import astroUNL.classaction.browser.views.elements.ScrollableLayoutPanes;
-	import astroUNL.classaction.browser.views.elements.ClickableText;
+	
+	import astroUNL.naap.views.ClickableText;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;

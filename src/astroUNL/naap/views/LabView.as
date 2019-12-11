@@ -2,7 +2,7 @@
 LabView.as
 naap-air-app
 astro.unl.edu
-2019-11-20
+2019-12-11
 */
 
 package astroUNL.naap.views {
@@ -10,11 +10,11 @@ package astroUNL.naap.views {
 	import astroUNL.classaction.browser.resources.ResourceItem;
 	import astroUNL.classaction.browser.views.ResourceWindowsManager;
 	import astroUNL.classaction.browser.views.elements.ScrollableLayoutPanes;
-	import astroUNL.classaction.browser.views.elements.ClickableText;
 	import astroUNL.classaction.browser.events.MenuEvent;
 	
 	import astroUNL.naap.data.Lab;	
 	import astroUNL.naap.events.StateChangeRequestEvent;
+	import astroUNL.naap.views.ClickableText;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -31,6 +31,8 @@ package astroUNL.naap.views {
 		
 		protected var _sectionTitleFormat:TextFormat;
 		protected var _linkFormat:TextFormat;
+		
+		protected const PANEL_WIDTH:Number = 380;
 		
 		protected var _panelWidth:Number;
 		protected var _panelHeight:Number;
@@ -54,6 +56,8 @@ package astroUNL.naap.views {
 		protected var _panes:ScrollableLayoutPanes;
 		
 		
+		protected var _newWindowIcons:Sprite;
+		
 		
 		public function LabView(w:Number, h:Number) {
 			
@@ -73,6 +77,9 @@ package astroUNL.naap.views {
 			_panes.y = _panesTopMargin;
 			addChild(_panes);
 			
+			_newWindowIcons = new Sprite();
+			addChild(_newWindowIcons);
+			
 			_sectionTitleFormat = new TextFormat("Verdana", 16, 0x0, true);
 			_linkFormat = new TextFormat("Verdana", 14, 0x0);
 		
@@ -80,7 +87,7 @@ package astroUNL.naap.views {
 		
 		public function setDimensions(w:Number, h:Number):void {
 			if (w==_panelWidth && h==_panelHeight) return;
-			_panelWidth = w;
+			_panelWidth = PANEL_WIDTH;
 			_panelHeight = h;
 			_dimensionsUpdateNeeded = true;
 			if (visible) redraw();
@@ -123,6 +130,8 @@ package astroUNL.naap.views {
 			
 			studentGuideLink.htmlText = "<a href=\"" + _lab.studentGuide + "\">Student Guide</a>";
 			
+			descriptionField.text = _lab.description;
+			
 			if (_dimensionsUpdateNeeded) {
 				doDimensionsUpdate();
 			}
@@ -131,6 +140,7 @@ package astroUNL.naap.views {
 			
 			_panes.reset();
 			
+			_newWindowIcons.removeChildren();
 			
 			var sectionTitleParams:Object = {topMargin: _headingTopMargin, bottomMargin: _headingBottomMargin, minLeftOver: _headingMinLeftOver};
 			var linkParams:Object = {columnTopMargin: 0, leftMargin: _itemLeftMargin, bottomMargin: _itemBottomMargin, minLeftOver: _itemMinLeftOver};
@@ -159,11 +169,17 @@ package astroUNL.naap.views {
 						_panes.addContent(_links[page], linkParams);
 					} else if (page.isSimulator) {
 						if (_links[page] == undefined) {
-							var sct:ClickableText = new ClickableText(page.title + " (opens in new window)", page, _linkFormat, _panes.columnWidth-_itemLeftMargin);
+							var sct:ClickableText = new ClickableText(page.title, page, _linkFormat, _panes.columnWidth-_itemLeftMargin);
 							sct.addEventListener(ClickableText.ON_CLICK, onSimulatorClicked, false, 0, true);
 							_links[page] = sct;
+							
 						}
 						_panes.addContent(_links[page], linkParams);
+						
+						var nwi:NewWindowIconSWC = new NewWindowIconSWC();
+						nwi.x = _panes.x + _links[page].backgroundWidth + _links[page].x;
+						nwi.y = _panes.y + _links[page].y;
+						_newWindowIcons.addChild(nwi);
 						
 					} else {
 						trace("ERROR: page is of unknown type");
