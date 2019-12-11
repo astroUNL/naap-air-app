@@ -1,4 +1,10 @@
-﻿
+﻿/*
+Breadcrumbs.as
+naap-air-app
+astro.unl.edu
+2019-11-21
+*/
+
 package astroUNL.naap.views {
 	
 	import astroUNL.naap.data.Lab;
@@ -20,6 +26,7 @@ package astroUNL.naap.views {
 		
 		protected var _homepageLink:ClickableText;
 		protected var _labLink:ClickableText;
+		protected var _pageTitle:ClickableText;
 		
 		protected var _lab:Lab;
 		
@@ -67,9 +74,13 @@ package astroUNL.naap.views {
 			_content.addChild(_homepageLink);
 			
 			_labLink = new ClickableText("", null, _linkTextFormat);
-			//_labLink.addEventListener(ClickableText.ON_CLICK, onLabClicked);
+			_labLink.addEventListener(ClickableText.ON_CLICK, onLabClicked);
 			_labLink.visible = false;
 			_content.addChild(_labLink);
+			
+			_pageTitle = new ClickableText("", null, _linkTextFormat);
+			_pageTitle.visible = false;
+			_content.addChild(_pageTitle);		
 
 		}
 		
@@ -114,31 +125,51 @@ package astroUNL.naap.views {
 		
 		
 		protected function onHomepageClicked(evt:Event):void {
-			dispatchEvent(new StateChangeRequestEvent(null, true));
+			dispatchEvent(new StateChangeRequestEvent(null, null, true));
+		}
+		
+		protected function onLabClicked(evt:Event):void {
+			dispatchEvent(new StateChangeRequestEvent(_lab, null, true));
 		}
 		
 		
-		public function setState(lab:Lab):void {
+		public function setState(lab:Lab, page:Object):void {
 			
 			_lab = lab;
 			
 			_homepageLink.visible = true;
-			
 						
-			if (_lab!=null) {
+			if (_lab != null) {
+				
 				_homepageLink.setClickable(true);
+				
+				_separator1.visible = true;
 				
 				_labLink.setText(_lab.name);
 				_labLink.visible = true;
-				_labLink.setClickable(false);
 				
-				_separator1.visible = true;
-				_separator2.visible = false;
+				if (page != null) {
+					_labLink.setClickable(true);
+					
+					_separator2.visible = true;
+					
+					_pageTitle.setText(page.title);
+					_pageTitle.visible = true;
+					_pageTitle.setClickable(false);
+					
+				} else {
+					_labLink.setClickable(false);
+					
+					_separator2.visible = false;
+					
+					_pageTitle.visible = false;
+				}
 			}
 			else {
 				_homepageLink.setClickable(false);
 				
 				_labLink.visible = false;
+				_pageTitle.visible = false;
 				
 				_separator1.visible = false;
 				_separator2.visible = false;
@@ -151,9 +182,10 @@ package astroUNL.naap.views {
 			_homepageLink.x = 0;
 			_separator1.x = _homepageLink.x + _homepageLink.width + _spacing;
 			_labLink.x = _separator1.x + _separator1.width + _spacing;
-			if (_lab!=null) {
+			if (_lab != null) {
 				_separator2.x = _labLink.x + _labLink.width + _spacing;
 			}
+			_pageTitle.x = _separator2.x + _separator2.width + _spacing;
 		}
 		
 	}	

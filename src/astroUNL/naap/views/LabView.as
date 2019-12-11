@@ -1,17 +1,20 @@
 ﻿/*
 LabView.as
-2019-09-19
+naap-air-app
+astro.unl.edu
+2019-11-20
 */
 
 package astroUNL.naap.views {
-	
-	import astroUNL.naap.data.Lab;
 	
 	import astroUNL.classaction.browser.resources.ResourceItem;
 	import astroUNL.classaction.browser.views.ResourceWindowsManager;
 	import astroUNL.classaction.browser.views.elements.ScrollableLayoutPanes;
 	import astroUNL.classaction.browser.views.elements.ClickableText;
 	import astroUNL.classaction.browser.events.MenuEvent;
+	
+	import astroUNL.naap.data.Lab;	
+	import astroUNL.naap.events.StateChangeRequestEvent;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -20,15 +23,14 @@ package astroUNL.naap.views {
 	import flash.text.TextField;
 	
 	public class LabView extends SWCLabView {
-		
-		public static const LAUNCH_ITEM_SELECTED:String = "launchItemSelected";
-		
+				
 		protected var _lab:Lab = null;
 		
+		protected var _sectionTitles:Dictionary;
 		protected var _links:Dictionary;
 		
-		protected var _headingFormat:TextFormat;
-		protected var _itemFormat:TextFormat;
+		protected var _sectionTitleFormat:TextFormat;
+		protected var _linkFormat:TextFormat;
 		
 		protected var _panelWidth:Number;
 		protected var _panelHeight:Number;
@@ -39,7 +41,7 @@ package astroUNL.naap.views {
 		protected var _panesWidth:Number;
 		protected var _panesHeight:Number;
 		protected var _columnSpacing:Number = 20;
-		protected var _numColumns:int = 2;
+		protected var _numColumns:int = 1;
 		protected var _easeTime:Number = 250;
 				
 		protected var _headingTopMargin:Number = 10;
@@ -52,9 +54,6 @@ package astroUNL.naap.views {
 		protected var _panes:ScrollableLayoutPanes;
 		
 		
-		protected var _backgroundHeading:TextField;
-		protected var _simulatorsHeading:TextField;
-		
 		
 		public function LabView(w:Number, h:Number) {
 			
@@ -64,6 +63,7 @@ package astroUNL.naap.views {
 			_panesWidth = _panelWidth - 2*_navButtonSpacing;
 			_panesHeight = _panelHeight - _panesTopMargin - _panesBottomMargin;
 			
+			_sectionTitles = new Dictionary();
 			_links = new Dictionary();
 			
 			_panesTopMargin = _title.height + _title.y + 20;
@@ -73,11 +73,9 @@ package astroUNL.naap.views {
 			_panes.y = _panesTopMargin;
 			addChild(_panes);
 			
-			_headingFormat = new TextFormat("Verdana", 15, 0x0, true);
-			_itemFormat = new TextFormat("Verdana", 14, 0x0);
+			_sectionTitleFormat = new TextFormat("Verdana", 16, 0x0, true);
+			_linkFormat = new TextFormat("Verdana", 14, 0x0);
 		
-			_backgroundHeading = createHeading("Background Interatives");
-			_simulatorsHeading = createHeading("Simulators");
 		}
 		
 		public function setDimensions(w:Number, h:Number):void {
@@ -109,8 +107,7 @@ package astroUNL.naap.views {
 			_panes.y = _panesTopMargin;
 			
 			// adjust the text widths
-			_backgroundHeading.width = _panes.columnWidth;
-			_simulatorsHeading.width = _panes.columnWidth;
+			for each (var sectionTitle:TextField in _sectionTitles) sectionTitle.width = _panes.columnWidth;
 			for each (var link:ClickableText in _links) link.setWidth(_panes.columnWidth-_itemLeftMargin);
 		
 			_dimensionsUpdateNeeded = false;
@@ -124,20 +121,69 @@ package astroUNL.naap.views {
 			
 			_title.text = _lab.name;
 			
+			studentGuideLink.htmlText = "<a href=\"" + _lab.studentGuide + "\">Student Guide</a>";
+			
 			if (_dimensionsUpdateNeeded) {
 				doDimensionsUpdate();
 			}
 			
-			var oldPaneNum:int = _panes.paneNum;
+			//var oldPaneNum:int = _panes.paneNum;
 			
 			_panes.reset();
 			
-			var headingParams:Object = {topMargin: _headingTopMargin, bottomMargin: _headingBottomMargin, minLeftOver: _headingMinLeftOver};
-			var itemParams:Object = {columnTopMargin: 0, leftMargin: _itemLeftMargin, bottomMargin: _itemBottomMargin, minLeftOver: _itemMinLeftOver};
 			
-			var i:int;
-			var ct:ClickableText;
-			var item:ResourceItem;
+			var sectionTitleParams:Object = {topMargin: _headingTopMargin, bottomMargin: _headingBottomMargin, minLeftOver: _headingMinLeftOver};
+			var linkParams:Object = {columnTopMargin: 0, leftMargin: _itemLeftMargin, bottomMargin: _itemBottomMargin, minLeftOver: _itemMinLeftOver};
+			
+			
+			trace("LabView redraw");
+			
+			for each (var section:Object in _lab.sections) {
+				
+				if (section.title != null) {
+					if (_sectionTitles[section.title] == undefined) {
+						var st:TextField = createSectionTitle(section.title);
+						_sectionTitles[section.title] = st;
+					}
+					_panes.addContent(_sectionTitles[section.title], sectionTitleParams);
+				}
+				
+				for each (var page:Object in section.pages) {
+					
+					if (page.isBackground) {
+						if (_links[page] == undefined) {
+							var bct:ClickableText = new ClickableText(page.title, page, _linkFormat, _panes.columnWidth-_itemLeftMargin);
+							bct.addEventListener(ClickableText.ON_CLICK, onBackgroundPageClicked, false, 0, true);
+							_links[page] = bct;
+						}
+						_panes.addContent(_links[page], linkParams);
+					} else if (page.isSimulator) {
+						if (_links[page] == undefined) {
+							var sct:ClickableText = new ClickableText(page.title + " (opens in new window)", page, _linkFormat, _panes.columnWidth-_itemLeftMargin);
+							sct.addEventListener(ClickableText.ON_CLICK, onSimulatorClicked, false, 0, true);
+							_links[page] = sct;
+						}
+						_panes.addContent(_links[page], linkParams);
+						
+					} else {
+						trace("ERROR: page is of unknown type");
+					}
+				}
+			}
+			
+			/*
+			if (_lab.backgroundPages.length > 0) {
+				_panes.addContent(_backgroundPagesHeading, headingParams);
+				for (i=0; i<_lab.backgroundPages.length; i++) {
+					page = _lab.backgroundPages[i];
+					if (_links[page] == undefined) {
+						ct = new ClickableText(page.title, page, _itemFormat, _panes.columnWidth-_itemLeftMargin);		
+						ct.addEventListener(ClickableText.ON_CLICK, onBackgroundPageClicked, false, 0, true);
+						_links[page] = ct;
+					}
+					_panes.addContent(_links[page], itemParams);
+				}
+			}
 			
 			if (_lab.backgroundSWFs.length > 0) {			
 				_panes.addContent(_backgroundHeading, headingParams);
@@ -162,21 +208,17 @@ package astroUNL.naap.views {
 				}
 				_panes.addContent(_links[item], itemParams);
 			}
+			*/
 		}
 		
 		
 		
-		public function get lab():Lab {
-			return _lab;
-		}
-		
-		public function set lab(arg:Lab):void {
+		public function setLab(arg:Lab):void {
 			_lab = arg;
 			redraw();
 		}
 		
-		
-		protected function createHeading(text:String):TextField {
+		protected function createSectionTitle(text:String):TextField {
 			var t:TextField = new TextField();
 			t.text = text;
 			t.autoSize = "left";
@@ -185,15 +227,22 @@ package astroUNL.naap.views {
 			t.multiline = true;
 			t.wordWrap = true;			
 			t.selectable = false;
-			t.setTextFormat(_headingFormat);
+			t.setTextFormat(_sectionTitleFormat);
 			t.embedFonts = true;
 			return t;
-		}				
+		}			
 		
-		protected function onItemClicked(evt:Event):void {
-			trace("onItemClicked");
-			var item:ResourceItem = evt.target.data;
-			ResourceWindowsManager.open(item);
+		protected function onBackgroundPageClicked(evt:Event):void {
+			trace("onBackgroundPageClicked");
+			var page:Object = evt.target.data;
+			dispatchEvent(new StateChangeRequestEvent(_lab, page));
+			
+		}
+		
+		protected function onSimulatorClicked(evt:Event):void {
+			trace("onSimulatorClicked");
+			var page:Object = evt.target.data;
+			ResourceWindowsManager.open(page.resourceItem);
 		}
 		
 	}

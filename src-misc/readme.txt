@@ -1,0 +1,3 @@
+The coord-replacement.swf in motion1/animations replaces the function of coord.swf. The original interactive used flashvars. Also, I found that I could not load two static versions separately (meridians and parallels), so they needed to be combined into one swf. What would happen is that the second swf would be all black. I tried swapping them, using different applications domains, etc., but could never solve the issue except by combining them.
+
+The thermal distribution overlay movie corrects an AIR label bug in hydrogen/animations/thermal_distribution.swf that can't be fixed since I can't find the original source file.

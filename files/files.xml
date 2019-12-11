@@ -2,6 +2,13 @@
 <Labs>
 <Lab id="ssm">
 	<Name>Solar System Models</Name>
+	<BackgroundPages>
+		<BackgroundPage>
+			<Title>Basic Observations</Title>
+			<LinkageID>ssm1</LinkageID>
+			<File>ssm/background-ssm1.swf</File>
+		</BackgroundPage>
+	</BackgroundPages>
 	<BackgroundSWFs>
 		<SWF>
 			<Name>Simple Heliocentric Model</Name>
@@ -358,10 +365,28 @@ These two require initialization parameters.
 			<Height>370</Height>
 		</SWF>
 		<SWF>
+			<Name>Blackbody Curves Plot</Name>
+			<File>ebs/animations/blackbody.swf</File>
+			<Width>700</Width>
+			<Height>460</Height>
+		</SWF>
+		<SWF>
+			<Name>Star Color Simulator</Name>
+			<File>ebs/animations/starColorSlider.swf</File>
+			<Width>470</Width>
+			<Height>220</Height>
+		</SWF>
+		<SWF>
 			<Name>Stellar Luminosity Calculator</Name>
 			<File>ebs/animations/stellarluminosity.swf</File>
 			<Width>600</Width>
 			<Height>400</Height>
+		</SWF>
+		<SWF>
+			<Name>Overlapping Circles Calculator</Name>
+			<File>ebs/animations/circles.swf</File>
+			<Width>400</Width>
+			<Height>300</Height>
 		</SWF>
 		<SWF>
 			<Name>Eclipsing Stars Demo</Name>
@@ -428,8 +453,8 @@ These two require initialization parameters.
 		<SWF>
 			<Name>Doppler Shift Demo</Name>
 			<File>esp/animations/dopplerShiftDemo.swf</File>
-			<Width>750</Width>
-			<Height>322</Height>
+			<Width>700</Width>
+			<Height>300</Height>
 		</SWF>
 		<SWF>
 			<Name>Star Wobble Demo</Name>
@@ -514,8 +539,8 @@ Also, this demo does not seem to work in AIR.
 		<SWF>
 			<Name>Radar Pulse Demo</Name>
 			<File>distance/animations/Pulse.swf</File>
-			<Width>480</Width>
-			<Height>640</Height>
+			<Width>640</Width>
+			<Height>480</Height>
 		</SWF>
 
 -->

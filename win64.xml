@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://ns.adobe.com/air/application/32.0">
 <id>astroUNL.naap</id>
-<versionLabel>v0.2 BETA</versionLabel>
-<versionNumber>0.2</versionNumber>
+<versionLabel>v0.3 BETA</versionLabel>
+<versionNumber>0.3</versionNumber>
 <copyright>Copyright 2019, UNL Astronomy Education Group</copyright>
 <filename>NAAP Labs</filename>
 <supportedProfiles>desktop extendedDesktop</supportedProfiles>
 <architecture>64</architecture>
 <initialWindow>
-<title>NAAP Labs - v0.2 BETA</title>
+<title>NAAP Labs - v0.3 BETA</title>
 <content>main.swf</content>
-<width>900</width>
-<height>650</height>
+<width>840</width>
+<height>730</height>
 <visible>true</visible>
 </initialWindow>
 </application>

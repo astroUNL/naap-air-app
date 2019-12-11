@@ -1,12 +1,28 @@
 ﻿issues.txt
-2019-10-07
+2019-12-10
 
-Lab					Interactive or Sim				Problem
-===					==================				=======
-Basic Coordinates and Seasons		[Currently Removed] Merdians			Requires flashvars.
-Basic Coordinates and Seasons		[Currently Removed] Parallels of Latitude	Requires flashvars.
-The Rotating Sky			Locations of Objects in the Sky			Text on celestial sphere not rendered correctly (affects macOS only).
-The Rotating Sky			Rotating Sky Explorer				It is possible to change a constellation star’s location using the text fields (long standing bug — not AIR related).
-Hydrogen Energy Levels			Thermal Distribution Demo			“Level1” label appears as “NE”.
-Atmospheric Retention			Gas Retention Simulator				Cosmetic issue with gas combobox when limit reached — does not interfere with functionality.
-Cosmic Distance Ladder			[Currently Removed] Radar Pulse Demo		Size is incorrect. Too large. Also, doesn’t seem to work in NAAP AIR app.
+*** Needs Fixing ***
+
+Lab					Interactive or Sim			Problem
+===					==================			=======
+The Rotating Sky			Locations of Objects in the Sky		Text on celestial sphere not rendered correctly (affects macOS only).
+
+
+*** Will Not Fix ***
+
+Lab					Interactive or Sim			Problem
+===					==================			=======
+The Rotating Sky			Rotating Sky Explorer			It is possible to change a constellation star’s location using the text fields (long standing bug — not AIR related).
+Atmospheric Retention			Gas Retention Simulator			Cosmetic issue with gas combobox when limit reached — does not interfere with functionality.
+
+
+*** Fixed ***
+
+Lab					Interactive or Sim			Problem
+===					==================			=======
+Basic Coordinates and Seasons		Merdians				Requires flashvars.
+Basic Coordinates and Seasons		Parallels of Latitude			Requires flashvars.
+	-> Meridians and Parallels combined into new animation (see src/misc folder).
+Hydrogen Energy Levels			Thermal Distribution Demo		“Level1” label appears as “NE”.
+	-> Couldn't find original source file, so made an overlay movie with the correct label (see src/misc folder).
+Cosmic Distance Ladder			Radar Pulse Demo			Size is incorrect. Too large. Also, doesn’t seem to work in NAAP AIR app.

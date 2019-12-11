@@ -1,18 +1,17 @@
 ﻿/*
-Homepage.as
-2019-09-18
-
-Roughly based on ClassAction's ModulesListView.
+RootView.as
+naap-air-app
+astro.unl.edu
+2019-11-21
 */
 
 package astroUNL.naap.views {
 	
 	import astroUNL.naap.data.LabsList;
-	
+	import astroUNL.naap.events.StateChangeRequestEvent;
 	
 	import astroUNL.classaction.browser.views.elements.ScrollableLayoutPanes;
 	import astroUNL.classaction.browser.views.elements.ClickableText;
-	import astroUNL.classaction.browser.events.MenuEvent;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -20,10 +19,8 @@ package astroUNL.naap.views {
 	import flash.text.TextFormat;
 	import flash.text.TextField;
 	
-	public class Homepage extends Sprite {
-		
-		public static const LAB_SELECTED:String = "labSelected";
-		
+	public class RootView extends Sprite {
+				
 		protected var _labsList:LabsList = null;
 		
 		// labLinks contains the references to the ClickableText
@@ -61,7 +58,7 @@ package astroUNL.naap.views {
 		
 		protected var _standardHeading:TextField;
 		
-		public function Homepage(w:Number, h:Number) {
+		public function RootView(w:Number, h:Number) {
 			
 			_panelWidth = w;
 			_panelHeight = h;
@@ -70,9 +67,7 @@ package astroUNL.naap.views {
 			_panesHeight = _panelHeight - _panesTopMargin - _panesBottomMargin;
 			
 			_labLinks = new Dictionary();
-			
-			trace(_panesWidth+', '+_panesHeight);
-			
+						
 			_panes = new ScrollableLayoutPanes(_panesWidth, _panesHeight, _navButtonSpacing, _navButtonSpacing, {topMargin: 0, leftMargin: _panesSideMargin, rightMargin: _panesSideMargin, bottomMargin: 0, columnSpacing: _columnSpacing, numColumns: _numColumns});
 			_panes.x = _navButtonSpacing;
 			_panes.y = _panesTopMargin;
@@ -149,9 +144,7 @@ package astroUNL.naap.views {
 			if (_dimensionsUpdateNeeded) {
 				doDimensionsUpdate();
 			}
-			
-			var oldPaneNum:int = _panes.paneNum;
-			
+						
 			_panes.reset();
 			
 			var headingParams:Object = {topMargin: _headingTopMargin, bottomMargin: _headingBottomMargin, minLeftOver: _headingMinLeftOver};
@@ -161,11 +154,12 @@ package astroUNL.naap.views {
 			
 			var i:int;
 			var ct:ClickableText;
+			
+			trace(_labsList.labs.length);
 						
 			for (i=0; i<_labsList.labs.length; i++) {
 				if (_labLinks[_labsList.labs[i]] == undefined) {
 					var labName:String = (i+1) + ". " + _labsList.labs[i].name;
-					trace(labName);
 					ct = new ClickableText(labName, _labsList.labs[i], _itemFormat, _panes.columnWidth-_itemLeftMargin);		
 					ct.addEventListener(ClickableText.ON_CLICK, onLabClicked, false, 0, true);
 					_labLinks[_labsList.labs[i]] = ct;
@@ -175,8 +169,6 @@ package astroUNL.naap.views {
 			
 		}
 		
-		
-		
 		public function get labsList():LabsList {
 			return _labsList;
 		}
@@ -185,7 +177,6 @@ package astroUNL.naap.views {
 			_labsList = list;
 			redraw();
 		}
-		
 		
 		protected function createHeading(text:String):TextField {
 			var t:TextField = new TextField();
@@ -202,7 +193,7 @@ package astroUNL.naap.views {
 		}				
 		
 		protected function onLabClicked(evt:Event):void {
-			dispatchEvent(new MenuEvent(Homepage.LAB_SELECTED, evt.target.data));
+			dispatchEvent(new StateChangeRequestEvent(evt.target.data, null));
 		}
 		
 	}

@@ -1,6 +1,8 @@
 ﻿/*
 Main.as
-2019-09-19
+naap-air-app
+astro.unl.edu
+2019-12-03
 */
 
 package astroUNL.naap {
@@ -11,9 +13,13 @@ package astroUNL.naap {
 	
 	import astroUNL.naap.data.LabsList;
 	import astroUNL.naap.data.Lab;
-	import astroUNL.naap.views.Homepage;
-	import astroUNL.naap.views.LabView;
+	
 	import astroUNL.naap.views.HeaderBar;
+	
+	import astroUNL.naap.views.RootView;
+	import astroUNL.naap.views.LabView;
+	import astroUNL.naap.views.PageView;
+
 	import astroUNL.naap.events.StateChangeRequestEvent;
 
 	import flash.display.Sprite;
@@ -26,8 +32,10 @@ package astroUNL.naap {
 		protected var _labsList:LabsList;
 		
 		protected var _header:HeaderBar;
-		protected var _homepage:Homepage;
+		
+		protected var _rootView:RootView;
 		protected var _labView:LabView;
+		protected var _pageView:PageView;
 		
 		public function Main() {
 			
@@ -44,10 +52,11 @@ package astroUNL.naap {
 		}
 		
 		
-		protected const _minWidth:Number = 400;
-		protected const _minHeight:Number = 200;		
+		protected const _minWidth:Number = 845;
+		protected const _minHeight:Number = 600;		
 		protected const _homepageMargins:Object = {left: 20, right: 5, top: 20, bottom: 10};
 		protected const _labViewMargins:Object = {left: 20, right: 5, top: 15, bottom: 10}; 
+		
 		
 		protected function onAddedToStage(evt:Event):void {
 			trace("onAddedToStage");
@@ -66,17 +75,23 @@ package astroUNL.naap {
 			
 			Downloader.init("files/");
 			
-			_labsList = new LabsList("files.xml");
+			_labsList = new LabsList("labs.xml");
 			_labsList.addEventListener(LabsList.LOAD_FINISHED, onLabsListLoadFinished);
 			
-			_homepage = new Homepage(stage.stageWidth, stage.stageHeight);
-			_homepage.addEventListener(Homepage.LAB_SELECTED, onLabSelected);
-			_homepage.visible = false;
-			addChild(_homepage);
+			_rootView = new RootView(stage.stageWidth, stage.stageHeight);
+			_rootView.addEventListener(StateChangeRequestEvent.STATE_CHANGE_REQUESTED, onStateChangeRequested);
+			_rootView.visible = false;
+			addChild(_rootView);
 			
 			_labView = new LabView(stage.stageWidth, stage.stageHeight);
+			_labView.addEventListener(StateChangeRequestEvent.STATE_CHANGE_REQUESTED, onStateChangeRequested);
 			_labView.visible = false;
 			addChild(_labView);
+			
+			_pageView = new PageView(stage.stageWidth, stage.stageHeight);
+			_pageView.addEventListener(StateChangeRequestEvent.STATE_CHANGE_REQUESTED, onStateChangeRequested);
+			_pageView.visible = false;
+			addChild(_pageView);
 			
 			_header = new HeaderBar(windowWidth);
 			_header.addEventListener(StateChangeRequestEvent.STATE_CHANGE_REQUESTED, onStateChangeRequested);
@@ -86,71 +101,100 @@ package astroUNL.naap {
 			
 			updateDimensions();
 			
-			setView(null);
+			setView(null, null);
 		}
 		
 		protected function onStageResized(evt:Event):void {
-			trace("onStageResized");
 			updateDimensions();
 		}
 		
-		protected function onLabSelected(evt:MenuEvent):void {
-			setView(evt.data);
-		}
-		
 		protected function onStateChangeRequested(evt:StateChangeRequestEvent):void {
-			setView(evt.lab);			
+			setView(evt.lab, evt.page);			
 		}
 		
-		protected var _selectedLab:Lab = null;
-		
-		protected function setView(lab:Lab=null):void {
-			
-			_homepage.visible = false;
-			_labView.visible = false;
+		protected function setView(lab:Lab=null, page:Object=null):void {
 						
-			_selectedLab = lab;
+			_header.setState(lab, page);
 			
-			_header.setState(_selectedLab);
-			
-			if (_selectedLab == null) {
-				_homepage.visible = true;
-			} else {
-				_labView.lab = _selectedLab;
+			if (lab == null) {
+								
+				_rootView.visible = true;
+				_labView.visible = false;
+				_pageView.visible = false;
+				
+			} else if (page == null) {
+				
+				_labView.setLab(lab);
+				
+				_rootView.visible = false;
 				_labView.visible = true;
+				_pageView.visible = false;
+				
+			} else {
+				
+				_pageView.setPage(page);
+				
+				_rootView.visible = false;
+				_labView.visible = false;
+				_pageView.visible = true;
 			}
 		}
 		
+		protected var _windowWidth:Number = -1;
+		protected var _windowHeight:Number = -1;
 		
-				
 		protected function updateDimensions():void {
 			
+			var t:Number = Math.random();
+
+/*			
 			trace("Main Window, updateDimensions");
 			trace(" stage.stageWidth (before): "+stage.stageWidth);
 			trace(" stage.stageHeight (before): "+stage.stageHeight);
+			trace(t);
+*/
 			
-			var windowWidth:Number = Math.max(stage.stageWidth, _minWidth);
-			var windowHeight:Number = Math.max(stage.stageHeight, _minHeight);
-			stage.stageWidth = windowWidth;
-			stage.stageHeight = windowHeight;
+			if (stage.stageWidth == _windowWidth && stage.stageHeight == _windowHeight) {
+//				trace(" WARNING: redundant call to updateDimensions, will abort");
+				return;
+			}
 			
-			_header.width = windowWidth;
+			_windowWidth = Math.max(stage.stageWidth, _minWidth);
+			_windowHeight = Math.max(stage.stageHeight, _minHeight);
 			
-			var freeVerticalSpace:Number = windowHeight - Math.ceil(_header.height);
+			if (_windowWidth != stage.stageWidth) {
+				stage.stageWidth = _windowWidth;
+			}
 			
-			_homepage.x = _homepageMargins.left;
-			_homepage.y = _header.height + _homepageMargins.top;	
-			_homepage.setDimensions(windowWidth-_homepageMargins.left-_homepageMargins.right, freeVerticalSpace-_homepageMargins.top-_homepageMargins.bottom);
+			if (_windowHeight != stage.stageHeight) {
+				stage.stageHeight = _windowHeight;
+			}
+
+/*
+			trace(" stage.stageWidth (after): "+stage.stageWidth);
+			trace(" stage.stageHeight (after): "+stage.stageHeight);
+			trace(t);
+*/
+
+			_header.width = _windowWidth;
+			
+			var freeVerticalSpace:Number = _windowHeight - Math.ceil(_header.height);
+			
+			_rootView.x = _homepageMargins.left;
+			_rootView.y = _header.height + _homepageMargins.top;	
+			_rootView.setDimensions(_windowWidth-_homepageMargins.left-_homepageMargins.right, freeVerticalSpace-_homepageMargins.top-_homepageMargins.bottom);
 			
 			_labView.x = _labViewMargins.left;
 			_labView.y = _header.height + _labViewMargins.top;	
-			_labView.setDimensions(windowWidth-_labViewMargins.left-_labViewMargins.right, freeVerticalSpace-_labViewMargins.top-_labViewMargins.bottom);
+			_labView.setDimensions(_windowWidth-_labViewMargins.left-_labViewMargins.right, freeVerticalSpace-_labViewMargins.top-_labViewMargins.bottom);
+			
+			_pageView.x = 0;
+			_pageView.y = _header.height;
+			_pageView.setDimensions(_windowWidth, freeVerticalSpace);
 		}
 		
-		
 		protected function onLabsListLoadFinished(evt:Event):void {
-			trace("onLabsListLoadFinished");
-			_homepage.labsList = _labsList;
+			_rootView.labsList = _labsList;
 			
 		}
 		

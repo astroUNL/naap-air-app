@@ -1,6 +1,8 @@
 ﻿/*
 LabsList.as
-2019-09-18
+naap-air-app
+astro.unl.edu
+2019-11-20
 */
 
 package astroUNL.naap.data {
@@ -80,7 +82,6 @@ package astroUNL.naap.data {
 		
 		protected function parseData(data:String):void {
 			try {
-				trace("OK");
 				var labsXML:XML = new XML(data);
 				
 				labs = [];

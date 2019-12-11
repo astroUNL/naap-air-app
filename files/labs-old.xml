@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Labs>
+<Lab id="ssm">
+	<Name>Solar System Models</Name>
+	<Description>The NAAP Solar System Models Lab introduces the universe as envisioned by early thinkers culminating in a detailed look at the Copernican model.</Description>
+	<StudentGuide>ssm/naap_ssm_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Geocentric Model">
+			<BackgroundPage>
+				<Title>Basic Observations</Title>
+				<File>ssm/background/ssm-basic.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Elongation</Title>
+				<File>ssm/background/ssm-elongation.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Early Modeling</Title>
+				<File>ssm/background/ssm-modeling.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Ptolemaic System Simulator</Name>
+				<File>ssm/animations/ptolemaic.swf</File>
+				<Width>940</Width>
+				<Height>710</Height>
+				<Preview>ssm/animations/ptolemaic.jpg</Preview>
+			</Simulator>
+		</Section>
+		<Section title="Heliocentric Model">
+			<BackgroundPage>
+				<Title>Heliocentrism</Title>
+				<File>ssm/background/ssm-heliocentrism.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Elongations and Configurations</Title>
+				<File>ssm/background/ssm-configurations.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Planetary Configurations Simulator</Name>
+				<File>ssm/animations/configurationsSimulator.swf</File>
+				<Width>850</Width>
+				<Height>680</Height>
+				<Preview>ssm/animations/configurationsSimulator.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Copernican Derivations</Title>
+				<File>ssm/background/ssm-copernican.swf</File>
+			</BackgroundPage>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="motion1">
+	<Name>Basic Coordinates and Seasons</Name>
+	<Description>The NAAP Basic Coordinates and Seasons Lab covers three different, but related areas. Terrestrial coordinates and the celestial equatorial coordinate system are covered and are used to explore the motion of the sun and how it relates to seasons.</Description>
+	<StudentGuide>motion1/naap_motion1_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Terrestrial Coordinates">
+			<BackgroundPage>
+				<Title>Units of Longitude and Latitude</Title>
+				<File>motion1/background/motion1-long-lat-units.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Finding Longitude and Latitude</Title>
+				<File>motion1/background/motion1-finding-long-lat.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>A Bit of History</Title>
+				<File>motion1/background/motion1-history.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Flat Map Explorer</Name>
+				<File>motion1/animations/tc_flat.swf</File>
+				<Width>850</Width>
+				<Height>580</Height>
+				<Preview>motion1/animations/tc_flat.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Globe Explorer</Name>
+				<File>motion1/animations/tc_globe.swf</File>
+				<Width>650</Width>
+				<Height>400</Height>
+				<Preview>motion1/animations/tc_globe.jpg</Preview>
+			</Simulator>
+		</Section>
+		<Section title="Celestial Equatorial Coordinates">
+			<BackgroundPage>
+				<Title>Celestial Equatorial Coordinate System</Title>
+				<File>motion1/background/motion1-celestial.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Flat Sky Map Explorer</Name>
+				<File>motion1/animations/cec_flat.swf</File>
+				<Width>850</Width>
+				<Height>580</Height>
+				<Preview>motion1/animations/cec_flat.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Sky Map Explorer</Name>
+				<File>motion1/animations/cec_sky.swf</File>
+				<Width>850</Width>
+				<Height>560</Height>
+				<Preview>motion1/animations/cec_sky.jpg</Preview>
+			</Simulator>
+		</Section>
+		<Section title="Seasons and the Ecliptic">
+			<BackgroundPage>
+				<Title>Orbits and Light</Title>
+				<File>motion1/background/motion1-orbits.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Seasons and Ecliptic Simulator</Name>
+				<File>motion1/animations/seasons_ecliptic.swf</File>
+				<Width>970</Width>
+				<Height>710</Height>
+				<Preview>motion1/animations/seasons_ecliptic.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="motion2">
+	<Name>The Rotating Sky</Name>
+	<Description>The NAAP Rotating Sky Lab introduces the horizon coordinate system and the “apparent” rotation of the sky. The relationship between the horizon and celestial equatorial coordinate systems is explicitly explored.</Description>
+	<StudentGuide>motion2/naap_motion2_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Horizon Coordinate System">
+			<BackgroundPage>
+				<Title>The Observer</Title>
+				<File>motion2/background/motion2-observer.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Two Systems - Celestial, Horizon</Title>
+				<File>motion2/background/motion2-systems.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Rotating Sky">
+			<BackgroundPage>
+				<Title>Paths of the Stars</Title>
+				<File>motion2/background/motion2-paths.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Bands in the Sky</Title>
+				<File>motion2/background/motion2-bands.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Rotating Sky Explorer</Name>
+				<File>motion2/animations/ce_hc.swf</File>
+				<Width>900</Width>
+				<Height>710</Height>
+				<Preview>motion2/animations/ce_hc.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Sidereal Time and Hour Angle Demo</Name>
+				<File>motion2/animations/siderealTimeAndHourAngleDemo.swf</File>
+				<Width>850</Width>
+				<Height>470</Height>
+				<Preview>motion2/animations/siderealTimeAndHourAngleDemo.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="motion3">
+	<Name>Motions of the Sun</Name>
+	<Description>The NAAP Motions of the Sun Lab reviews some of the material from the Basic Coordinates and Seasons Lab and The Rotating Sky Lab and adds information to put all the pieces together for a more complete description of the motions of the sun. Computation of meridional altitude and stellar visibility are also introduced.</Description>
+	<StudentGuide>motion3/naap_motion3_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Seasonal Motion">
+			<BackgroundPage>
+				<Title>Sideral vs. Synodic</Title>
+				<File>motion3/background/motion3-sidereal-synodic.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Seasons and the Zodiac</Title>
+				<File>motion3/background/motion3-zodiac.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Sidereal and Solar Time Simulator</Name>
+				<File>motion3/animations/siderealSolarTime.swf</File>
+				<Width>980</Width>
+				<Height>570</Height>
+				<Preview>motion3/animations/siderealSolarTime.jpg</Preview>
+			</Simulator>
+		</Section>
+		<Section title="Daily Motion with Seasonal Effects">
+			<BackgroundPage>
+				<Title>Meridional Altitude</Title>
+				<File>motion3/background/motion3-meridional.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Sun Paths</Title>
+				<File>motion3/background/motion3-sun-paths.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Motions of the Sun Simulator</Name>
+				<File>motion3/animations/sunmotions.swf</File>
+				<Width>950</Width>
+				<Height>680</Height>
+				<Preview>motion3/animations/sunmotions.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="pos">
+	<Name>Planetary Orbits</Name>
+	<Description>The NAAP Planetary Orbits Lab is designed to facilitate understanding of Kepler's Three Laws of Motion as well as how velocity and force relate to the orbits. The user can manipulate the orbital properties of a fictional planet and read off various orbital parameters. Our solar system's planets can also be observed as a background for comparison.</Description>
+	<StudentGuide>pos/naap_pos_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Physics of Planetary Motion">
+			<BackgroundPage>
+				<Title>Kepler's Laws of Planetary Motion</Title>
+				<File>pos/background/pos-kepler.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Newton and Planetary Motion</Title>
+				<File>pos/background/pos-newton.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Planetary Orbit Simulator</Name>
+				<File>pos/animations/kepler.swf</File>
+				<Width>900</Width>
+				<Height>710</Height>
+				<Preview>pos/animations/kepler.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="lps">
+	<Name>Lunar Phases</Name>
+	<Description>The NAAP Lunar Phases Lab demonstrates how the earth-sun-moon geometry gives rise to the phases of the moon as seen from earth. A distant view of an observer looking down on earth as well as a perspective of an observer looking into the sky are used in the the simulator.</Description>
+	<StudentGuide>lps/naap_lps_sg_05.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Material">
+			<BackgroundPage>
+				<Title>Introduction to Moon Phases</Title>
+				<File>lps/background/lps-intro.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Moon Geometry</Title>
+				<File>lps/background/lps-geometry.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Time of Day</Title>
+				<File>lps/background/lps-time.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Rising and Setting</Title>
+				<File>lps/background/lps-rising-setting.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>The Horizon Diagram</Title>
+				<File>lps/background/lps-horizon-diagram.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>The Witness and the Detective</Title>
+				<File>lps/background/lps-detective.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulators">
+			<Simulator>
+				<Name>Moon Bisector Demo</Name>
+				<File>lps/animations/moonBisectorDemo.swf</File>
+				<Width>900</Width>
+				<Height>644</Height>
+				<Preview>lps/animations/moonBisectorDemo.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Lunar Phase Simulator</Name>
+				<File>lps/animations/lps.swf</File>
+				<Width>840</Width>
+				<Height>680</Height>
+				<Preview>lps/animations/lps.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Moon Phases and the Horizon Diagram</Name>
+				<File>lps/animations/moonPhasesHorizonDiagram.swf</File>
+				<Width>750</Width>
+				<Height>465</Height>
+				<Preview>lps/animations/moonPhasesHorizonDiagram.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="blackbody">
+	<Name>Blackbody Curves and UBV Filters</Name>
+	<Description>The NAAP Blackbody Curves & UBV Filters Lab demonstrates the basic properties of the blackbody curve and how temperature relates to blackbody curves. The temperature-color correlation of blackbody curves is explored through the concept of filters, which are also introduced in this module.</Description>
+	<StudentGuide>blackbody/naap_blackbody_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Material">
+			<BackgroundPage>
+				<Title>Spectra</Title>
+				<File>blackbody/background/blackbody-spectra.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Filters</Title>
+				<File>blackbody/background/blackbody-filters.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Color Index</Title>
+				<File>blackbody/background/blackbody-color-index.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulators">
+			<Simulator>
+				<Name>Light and Filters Simulator</Name>
+				<File>blackbody/animations/filters.swf</File>
+				<Width>980</Width>
+				<Height>710</Height>
+				<Preview>blackbody/animations/filters.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Blackbody Curves and Filters Explorer</Name>
+				<File>blackbody/animations/blackbody.swf</File>
+				<Width>950</Width>
+				<Height>550</Height>
+				<Preview>blackbody/animations/blackbody.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="hydrogen">
+	<Name>Hydrogen Energy Levels</Name>
+	<Description>The NAAP Hydrogen Energy Levels Lab introduces the concept of how quantum mechanics and light relate with respect to the Hydrogen atom. The Energy Levels simulator allows dynamic interaction with a Bohr model version of a single Hydrogen atom. The Thermal Distribution histogram gives a temperature dependent plot of occupied states for many, many atoms.</Description>
+	<StudentGuide>hydrogen/naap_hydrogen_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Hydrogen Levels">
+			<BackgroundPage>
+				<Title>Energy Levels</Title>
+				<File>hydrogen/background/hydrogen-levels.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Light</Title>
+				<File>hydrogen/background/hydrogen-light.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Transitions</Title>
+				<File>hydrogen/background/hydrogen-transitions.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Hydrogen Atom Simulator</Name>
+				<File>hydrogen/animations/hydrogen_atom.swf</File>
+				<Width>950</Width>
+				<Height>640</Height>
+				<Preview>hydrogen/animations/hydrogen_atom.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Level Abundances</Title>
+				<File>hydrogen/background/hydrogen-abundances.swf</File>
+			</BackgroundPage>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="hr">
+	<Name>Hertzsprung-Russell Diagram</Name>
+	<Description>The NAAP HR Diagram Lab explores the Hertzsprung-Russell diagram and those areas necessary to understand the diagram such as (but not limited to) the different kinds of spectrum, spectral classification, and luminosity class. In short, this module provides a fairly in-depth tutorial in reading HR diagrams.</Description>
+	<StudentGuide>hr/naap_hr_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Material">
+			<BackgroundPage>
+				<Title>Spectral Classification</Title>
+				<File>hr/background/hr-classification.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Luminosity</Title>
+				<File>hr/background/hr-luminosity.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Hertzsprung-Russell Diagram</Title>
+				<File>hr/background/hr-diagram.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulator">
+			<Simulator>
+				<Name>Hertzsprung-Russell Diagram Explorer</Name>
+				<File>hr/animations/hrExplorer.swf</File>
+				<Width>805</Width>
+				<Height>665</Height>
+				<Preview>hr/animations/hrExplorer.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="ebs">
+	<Name>Eclipsing Binary Stars</Name>
+	<Description>The NAAP Eclipsing Binary Stars Lab demonstrates how information about stars which can not be directly observed can be inferred from a special class of binary stars – eclipsing binaries.</Description>
+	<StudentGuide>ebs/naap_ebs_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Material">
+			<BackgroundPage>
+				<Title>Center of Mass</Title>
+				<File>ebs/background/ebs-center-of-mass.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Spectral Types of Stars</Title>
+				<File>ebs/background/ebs-spectral-types.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Spectral Types of Stars Overflow</Title>
+				<File>ebs/background/ebs-spectral-types-overflow.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Luminosity</Title>
+				<File>ebs/background/ebs-luminosity.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Light Curves</Title>
+				<File>ebs/background/ebs-light-curves.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulator">
+			<Simulator>
+				<Name>Eclipsing Binary Simulator</Name>
+				<File>ebs/animations/ebs.swf</File>
+				<Width>817</Width>
+				<Height>710</Height>
+				<Preview>ebs/animations/ebs.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="atmosphere">
+	<Name>Atmospheric Retention</Name>
+	<Description>The NAAP Atmospheric Retention Lab explores some of the elements that go into the retention or loss of an atmosphere by a planet. The Maxwell-Boltzmann velocity distribution and escape velocity are introduced.</Description>
+	<StudentGuide>atmosphere/naap_atmosphere_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Atmospheric Retention">
+			<BackgroundPage>
+				<Title>Escape Velocity</Title>
+				<File>atmosphere/background/atmosphere-escape.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Projectile Simulation</Title>
+				<File>atmosphere/background/atmosphere-projectile.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Speed Distribution</Title>
+				<File>atmosphere/background/atmosphere-distribution.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Gas Retention Simulator</Name>
+				<File>atmosphere/animations/gasRetentionSimulator.swf</File>
+				<Width>900</Width>
+				<Height>650</Height>
+				<Preview>atmosphere/animations/gasRetentionSimulator.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Gas Retention Plot</Name>
+				<File>atmosphere/animations/gasRetentionPlot.swf</File>
+				<Width>880</Width>
+				<Height>660</Height>
+				<Preview>atmosphere/animations/gasRetentionPlot.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>A Second Look</Title>
+				<File>atmosphere/background/atmosphere-second-look.swf</File>
+			</BackgroundPage>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="esp">
+	<Name>Extrasolar Planets</Name>
+	<Description>The NAAP Extrasolar Planets Lab introduces the search for planets outside of our solar system using the Doppler and transit methods. It includes simulations of the observed radial velocities of singular planetary systems and introduces the concept of noise and detection.</Description>
+	<StudentGuide>esp/naap_esp_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Materials">
+			<BackgroundPage>
+				<Title>Introduction</Title>
+				<File>esp/background/esp-intro.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Center of Mass</Title>
+				<File>esp/background/esp-center-of-mass.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Doppler Shift</Title>
+				<File>esp/background/esp-doppler.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Detection</Title>
+				<File>esp/background/esp-detection.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulators">
+			<Simulator>
+				<Name>Exoplanet Radial Velocity Simulator</Name>
+				<File>esp/animations/radialVelocitySimulator.swf</File>
+				<Width>920</Width>
+				<Height>680</Height>
+				<Preview>esp/animations/radialVelocitySimulator.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Exoplanet Transit Simulator</Name>
+				<File>esp/animations/transitSimulator.swf</File>
+				<Width>920</Width>
+				<Height>650</Height>
+				<Preview>esp/animations/transitSimulator.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="vsp">
+	<Name>Variable Star Photometry</Name>
+	<Description>The NAAP Variable Star Photometry Lab introduces variable stars – Eclipsing Binaries, Cepheids, and RR Lyrae. Topics include how images of stars are processed, variable stars identified, and the properties of the variable stars determined.</Description>
+	<StudentGuide>vsp/naap_vsp_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Materials">
+			<BackgroundPage>
+				<Title>Overview of Variable Stars</Title>
+				<File>vsp/background/vsp-overview.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Properties of CCDs</Title>
+				<File>vsp/background/vsp-ccds.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulators">
+			<Simulator>
+				<Name>Registration Simulator</Name>
+				<File>vsp/animations/registrationSimulator.swf</File>
+				<Width>850</Width>
+				<Height>475</Height>
+				<Preview>vsp/animations/registrationSimulator.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Blink Comparator Simulator</Name>
+				<File>vsp/animations/blinkComparatorSimulator.swf</File>
+				<Width>800</Width>
+				<Height>400</Height>
+				<Preview>vsp/animations/blinkComparatorSimulator.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Photometry Simulator</Name>
+				<File>vsp/animations/photometrySimulator.swf</File>
+				<Width>850</Width>
+				<Height>600</Height>
+				<Preview>vsp/animations/photometrySimulator.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Variable Star Photometry Analyzer</Name>
+				<File>vsp/animations/variableStarPhotometryAnalyzer.swf</File>
+				<Width>900</Width>
+				<Height>715</Height>
+				<Preview>vsp/animations/variableStarPhotometryAnalyzer.jpg</Preview>
+			</Simulator>
+		</Section>
+		<Section title="Optional">
+			<BackgroundPage>
+				<Title>Period Determination</Title>
+				<File>vsp/background/vsp-period.swf</File>
+			</BackgroundPage>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="distance">
+	<Name>Cosmic Distance Ladder</Name>
+	<Description>The NAAP Cosmic Distance Ladder lab introduces a few of the primary methods used by astronomers to determine astronomical distances. Parallax is introduced first, specroscopic parallax, main sequence fitting, variable stars, and supernova are all discussed.</Description>
+	<StudentGuide>distance/naap_distance_sg_08.pdf</StudentGuide>
+	<Content>
+		<Section title="Cosmic Distance Ladder">
+			<BackgroundPage>
+				<Title>Radar Ranging</Title>
+				<File>distance/background/distance-radar.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Parallax</Title>
+				<File>distance/background/distance-parallax.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Parallax Explorer</Name>
+				<File>distance/animations/parallaxExplorer.swf</File>
+				<Width>800</Width>
+				<Height>605</Height>
+				<Preview>distance/animations/parallaxExplorer.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Distance Modulus</Title>
+				<File>distance/background/distance-dist-modulus.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Spectroscopic Parallax</Title>
+				<File>distance/background/distance-spectro-parallax.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Spectroscopic Parallax Simulator</Name>
+				<File>distance/animations/spectroParallax.swf</File>
+				<Width>870</Width>
+				<Height>600</Height>
+				<Preview>distance/animations/spectroParallax.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Main Sequence Fitting</Title>
+				<File>distance/background/distance-main-sequence.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>HR Diagram Star Cluster Fitting Explorer</Name>
+				<File>distance/animations/clusterFittingExplorer.swf</File>
+				<Width>800</Width>
+				<Height>550</Height>
+				<Preview>distance/animations/clusterFittingExplorer.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Cepheids</Title>
+				<File>distance/background/distance-cepheids.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Supernovae</Title>
+				<File>distance/background/distance-supernovae.swf</File>
+			</BackgroundPage>
+			<Simulator>
+				<Name>Supernova Light Curve Fitting Explorer</Name>
+				<File>distance/animations/snCurveExplorer.swf</File>
+				<Width>650</Width>
+				<Height>620</Height>
+				<Preview>distance/animations/snCurveExplorer.jpg</Preview>
+			</Simulator>
+			<BackgroundPage>
+				<Title>Hubble's Law</Title>
+				<File>distance/background/distance-hubbles-law.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Summation</Title>
+				<File>distance/background/distance-summation.swf</File>
+			</BackgroundPage>
+		</Section>
+	</Content>
+</Lab>
+<Lab id="habitablezones">
+	<Name>Habitable Zones</Name>
+	<Description>The NAAP Habitable Zones Lab introduces the basic conditions thought necessary for life to exist, and explores where in the universe those conditions are most likely to be met.</Description>
+	<StudentGuide>habitablezones/naap_habitablezones_sg.pdf</StudentGuide>
+	<Content>
+		<Section title="Background Materials">
+			<BackgroundPage>
+				<Title>Life in the Universe</Title>
+				<File>habitablezones/background/habitablezones-life.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Circumstellar Habitable Zones</Title>
+				<File>habitablezones/background/habitablezones-circumstellar.swf</File>
+			</BackgroundPage>
+			<BackgroundPage>
+				<Title>Galactic Habitable Zones</Title>
+				<File>habitablezones/background/habitablezones-galactic.swf</File>
+			</BackgroundPage>
+		</Section>
+		<Section title="Simulators">
+			<Simulator>
+				<Name>Circumstellar Habitable Zone Simulator</Name>
+				<File>habitablezones/animations/stellarHabitableZone.swf</File>
+				<Width>980</Width>
+				<Height>765</Height>
+				<Preview>habitablezones/animations/stellarHabitableZone.jpg</Preview>
+			</Simulator>
+			<Simulator>
+				<Name>Milky Way Habitability Explorer</Name>
+				<File>habitablezones/animations/milkyWayHabitability.swf</File>
+				<Width>860</Width>
+				<Height>700</Height>
+				<Preview>habitablezones/animations/milkyWayHabitability.jpg</Preview>
+			</Simulator>
+		</Section>
+	</Content>
+</Lab>
+</Labs>

@@ -27,8 +27,8 @@
         <!-- List of SWC files or directories to compile against but to omit from -->
         <!-- linking. -->
         <external-library-path>
-		<path-element>C:/Users/main/Desktop/AIRSDK_Compiler_32/frameworks/libs/air/airglobal.swc</path-element>
-		<path-element>C:/Users/main/Desktop/AIRSDK_Compiler_32/frameworks/libs/air/aircore.swc</path-element>
+		<path-element>../../../../../AIR_SDK_32/frameworks/libs/air/airglobal.swc</path-element>
+		<path-element>../../../../../AIR_SDK_32/frameworks/libs/air/aircore.swc</path-element>
         </external-library-path>
 
         <!-- not set -->
