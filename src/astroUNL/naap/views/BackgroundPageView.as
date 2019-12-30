@@ -2,7 +2,7 @@
 BackgroundPageView.as
 naap-air-app
 astro.unl.edu
-2019-12-10
+2019-12-11
 */
 
 package astroUNL.naap.views {
@@ -16,6 +16,7 @@ package astroUNL.naap.views {
 	import astroUNL.classaction.browser.events.MenuEvent;
 	
 	import flash.display.Sprite;
+	import flash.display.InteractiveObject;
 	
 	//import flash.utils.Dictionary;
 	
@@ -25,6 +26,7 @@ package astroUNL.naap.views {
 	import flash.display.Loader;
 	
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	//import flash.events.IOErrorEvent;
 
 	import flash.net.URLRequest;
@@ -221,6 +223,13 @@ package astroUNL.naap.views {
 			for (var i:Number = 0; i < _swfs.length; ++i) {
 				var swf:Loader = _swfs[i];
 				if (swf == evt.target.loader) {
+					/*
+					swf.addEventListener("mouseOver", onMouseOverSWF);
+					swf.focusRect = false;
+					swf.mouseEnabled = true;
+					swf.tabEnabled = true;
+					swf.tabIndex = 10 + i;
+					*/
 					_content.addChild(swf);
 					var newIndex:Number = _content.getChildIndex(swf);
 					_content.swapChildrenAt(2*i, newIndex);
@@ -239,6 +248,14 @@ package astroUNL.naap.views {
 			trace(" actionScriptVersion: "+evt.target.actionScriptVersion);
 			*/
 		}
+		
+		/*
+		protected function onMouseOverSWF(evt:MouseEvent):void {
+			trace("onMouseOverSWF");
+			trace(" evt.target: "+evt.target);
+			stage.focus = evt.target as InteractiveObject;
+		}
+		*/
 		
 		protected function redraw():void {
 			trace("BackgroundPageView redraw");

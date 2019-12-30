@@ -2,7 +2,7 @@
 Main.as
 naap-air-app
 astro.unl.edu
-2019-12-03
+2019-12-29
 */
 
 package astroUNL.naap {
@@ -53,8 +53,8 @@ package astroUNL.naap {
 		
 		
 		protected const _minWidth:Number = 845;
-		protected const _minHeight:Number = 600;		
-		protected const _homepageMargins:Object = {left: 20, right: 5, top: 20, bottom: 10};
+		protected const _minHeight:Number = 650;		
+		protected const _homepageMargins:Object = {left: 0, right: 0, top: 0, bottom: 0}; //{left: 20, right: 5, top: 20, bottom: 10};
 		protected const _labViewMargins:Object = {left: 20, right: 5, top: 15, bottom: 10}; 
 		
 		

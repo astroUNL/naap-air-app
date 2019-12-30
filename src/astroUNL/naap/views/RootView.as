@@ -2,7 +2,7 @@
 RootView.as
 naap-air-app
 astro.unl.edu
-2019-12-11
+2019-12-29
 */
 
 package astroUNL.naap.views {
@@ -20,7 +20,7 @@ package astroUNL.naap.views {
 	import flash.text.TextFormat;
 	import flash.text.TextField;
 	
-	public class RootView extends Sprite {
+	public class RootView extends RootViewSWC {
 				
 		protected var _labsList:LabsList = null;
 		
@@ -37,8 +37,8 @@ package astroUNL.naap.views {
 		
 		protected var _panelWidth:Number;
 		protected var _panelHeight:Number;
-		protected var _navButtonSpacing:Number = 20;
-		protected var _panesTopMargin:Number = 0;
+		protected var _navButtonSpacing:Number = 35;
+		protected var _panesTopMargin:Number = 57;
 		protected var _panesSideMargin:Number = 15;
 		protected var _panesBottomMargin:Number = 45;
 		protected var _panesWidth:Number;
@@ -57,7 +57,7 @@ package astroUNL.naap.views {
 		protected var _panes:ScrollableLayoutPanes;
 		
 		
-		protected var _standardHeading:TextField;
+		//protected var _standardHeading:TextField;
 		
 		public function RootView(w:Number, h:Number) {
 			
@@ -74,10 +74,10 @@ package astroUNL.naap.views {
 			_panes.y = _panesTopMargin;
 			addChild(_panes);
 			
-			_headingFormat = new TextFormat("Verdana", 15, 0x0, true);
-			_itemFormat = new TextFormat("Verdana", 14, 0x0);
+			_headingFormat = new TextFormat("Verdana", 15, 0xffffff, true);
+			_itemFormat = new TextFormat("Verdana", 15, 0xffffff, true);
 		
-			_standardHeading = createHeading("NAAP Labs");
+			//_standardHeading = createHeading("NAAP Labs");
 			
 		/*
 			_leftButton = new ResourcePanelNavButton();
@@ -130,7 +130,7 @@ package astroUNL.naap.views {
 			_panes.y = _panesTopMargin;
 			
 			// adjust the text widths
-			_standardHeading.width = _panes.columnWidth;
+			//_standardHeading.width = _panes.columnWidth;
 			for each (var link:ClickableText in _labLinks) link.setWidth(_panes.columnWidth-_itemLeftMargin);
 		
 			_dimensionsUpdateNeeded = false;
@@ -151,7 +151,7 @@ package astroUNL.naap.views {
 			var headingParams:Object = {topMargin: _headingTopMargin, bottomMargin: _headingBottomMargin, minLeftOver: _headingMinLeftOver};
 			var itemParams:Object = {columnTopMargin: 45, leftMargin: _itemLeftMargin, bottomMargin: _itemBottomMargin, minLeftOver: _itemMinLeftOver};
 
-			_panes.addContent(_standardHeading, headingParams);
+			//_panes.addContent(_standardHeading, headingParams);
 			
 			var i:int;
 			var ct:ClickableText;
