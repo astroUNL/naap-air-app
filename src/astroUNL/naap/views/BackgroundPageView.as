@@ -142,10 +142,30 @@ package astroUNL.naap.views {
 			redraw();
 		}
 		
+		
+		protected var _pageSideMargin:Number;
+		
 		public function setDimensions(w:Number, h:Number):void {
+			//trace("setDimensions");
+			//trace(" w: "+w);
+			//trace(" h: "+h);
+			
+			var r:Number = w/h;
+			//trace(" r: "+r);
+			
+			const maxR:Number = 1.5;
+			
+			if (r > maxR) {
+				var rw:Number = maxR * h;
+				_pageSideMargin = 0.5*(w - rw);
+				w = rw;
+			} else {
+				_pageSideMargin = 0;
+			}
+			
 			_viewWidth = w;
 			_viewHeight = h;
-			//_scroller.setHeight(_viewHeight);
+			
 			redraw();
 		}
 		
@@ -268,24 +288,27 @@ package astroUNL.naap.views {
 			trace("...is visible");
 			
 			var savedPosition:Number = getUnscaledScrollPosition();
+
 			
-			scroller.x = _viewWidth - scroller.width;
+			var contentAvailableViewWidth:Number = _viewWidth - scroller.width - _scrollerMargin;
+			
+			_content.scaleX = contentAvailableViewWidth/_contentWidth;
+			_content.scaleY = _content.scaleX;
+			
+			_content.x = _pageSideMargin;
+			
+			scroller.x = _content.x + contentAvailableViewWidth + _scrollerMargin;
 			scroller.y = 0;
 			scroller.height = _viewHeight;
 			
-			var contentAvailableWindowWidth:Number = _viewWidth - scroller.width - _scrollerMargin;
-			
-			_content.scaleX = contentAvailableWindowWidth/_contentWidth;
-			_content.scaleY = _content.scaleX;
-			
 			_contentMask.graphics.clear();
 			_contentMask.graphics.beginFill(0xe0ffa0);
-			_contentMask.graphics.drawRect(0, 0, contentAvailableWindowWidth, _viewHeight);
+			_contentMask.graphics.drawRect(_pageSideMargin, 0, contentAvailableViewWidth, _viewHeight);
 			_contentMask.graphics.endFill();
 			
 			_mouseOverlay.graphics.clear();
 			_mouseOverlay.graphics.beginFill(0x0000ff, 0);
-			_mouseOverlay.graphics.drawRect(0, 0, contentAvailableWindowWidth, _viewHeight);
+			_mouseOverlay.graphics.drawRect(_pageSideMargin, 0, contentAvailableViewWidth, _viewHeight);
 			_mouseOverlay.graphics.endFill();			
 			
 			updateScroller(savedPosition);
