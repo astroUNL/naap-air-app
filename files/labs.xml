@@ -266,7 +266,7 @@
 	<Content>
 		<Section title="Seasonal Motion">
 			<BackgroundPage>
-				<Title>Sideral vs. Synodic</Title>
+				<Title>Sidereal vs. Synodic</Title>
 				<SWF>
 					<File>motion3/background/motion3-sidereal-synodic.swf</File>
 					<X>0</X> <Y>0</Y> <Width>820</Width> <Height>775</Height> <Scale>1.0</Scale>

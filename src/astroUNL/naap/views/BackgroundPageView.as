@@ -153,7 +153,9 @@ package astroUNL.naap.views {
 			var r:Number = w/h;
 			//trace(" r: "+r);
 			
-			const maxR:Number = 1.5;
+			// Note: the zodiac interactive in Motions of the Sun / Seasons and the Zodiac
+			//  may be the tallest interactive.
+			const maxR:Number = 1.421;
 			
 			if (r > maxR) {
 				var rw:Number = maxR * h;
