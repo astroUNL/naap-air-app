@@ -2,7 +2,7 @@
 Main.as
 naap-air-app
 astro.unl.edu
-2019-12-29
+2020-01-02
 */
 
 package astroUNL.naap {
@@ -147,12 +147,11 @@ package astroUNL.naap {
 			
 			var t:Number = Math.random();
 
-/*			
+	
 			trace("Main Window, updateDimensions");
 			trace(" stage.stageWidth (before): "+stage.stageWidth);
 			trace(" stage.stageHeight (before): "+stage.stageHeight);
-			trace(t);
-*/
+
 			
 			if (stage.stageWidth == _windowWidth && stage.stageHeight == _windowHeight) {
 //				trace(" WARNING: redundant call to updateDimensions, will abort");

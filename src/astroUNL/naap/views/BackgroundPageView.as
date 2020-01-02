@@ -2,7 +2,7 @@
 BackgroundPageView.as
 naap-air-app
 astro.unl.edu
-2019-12-11
+2020-01-02
 */
 
 package astroUNL.naap.views {
@@ -304,7 +304,11 @@ package astroUNL.naap.views {
 			
 			scroller.update();
 			
-			scroller.scrollPosition = Math.min(maxScrollPosition, unscaledScrollPosition * _content.scaleY);
+			var sp:Number = Math.min(maxScrollPosition, unscaledScrollPosition * _content.scaleY);
+			scroller.scrollPosition = sp;
+						
+			// Sometimes the onScroll handler is not invoked when it should be.
+			onScroll(null);
 		}
 		
 		protected const _contentWidth:Number = 820;
