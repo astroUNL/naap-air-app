@@ -10,10 +10,10 @@
     <ROW Property="ARPCOMMENTS" Value="This file installs the astro.unl.edu NAAP Labs program." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://astro.unl.edu"/>
     <ROW Property="Manufacturer" Value="AstroUNL"/>
-    <ROW Property="ProductCode" Value="1033:{6BBB5987-0CBE-46C6-9B3F-D0C3E9B068EC} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{B895C5E5-FDDD-450D-B5A6-130D7E3ABD05} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="NAAP Labs"/>
-    <ROW Property="ProductVersion" Value="0.4" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.5" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{5420CAD0-270F-472F-ABE5-357CFB8503BD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
