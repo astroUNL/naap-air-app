@@ -360,7 +360,7 @@
 </Lab>
 <Lab id="lps">
 	<Name>Lunar Phases</Name>
-	<Description>The NAAP Lunar Phases Lab demonstrates how the earth-sun-moon geometry gives rise to the phases of the moon as seen from earth. A distant view of an observer looking down on earth as well as a perspective of an observer looking into the sky are used in the the simulator.</Description>
+	<Description>The NAAP Lunar Phases Lab demonstrates how the Earth-sun-moon geometry gives rise to the phases of the moon as seen from Earth. A distant view of an observer looking down on Earth as well as a perspective of an observer looking into the sky are used in the simulator.</Description>
 	<StudentGuide>lps/naap_lps_sg_05.pdf</StudentGuide>
 	<Content>
 		<Section title="Background Material">

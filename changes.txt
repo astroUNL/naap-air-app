@@ -1,0 +1,6 @@
+2020-01-03 - v0.5
+- Fixed multiple typos.
+- Enforced AP style on background pages: "Earth", "the sun", and "the moon".
+- Put usage note next to Synodic Period Calculator (bottom of Solar System Models / Elongations and Configurations).
+- Added aspect ratio limit to background pages so interactives are always completely visible.
+- Fixed scrollbar bug.
