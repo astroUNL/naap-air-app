@@ -9,8 +9,8 @@
 <initialWindow>
 <title>NAAP Labs - v1.0</title>
 <content>main.swf</content>
-<width>840</width>
-<height>730</height>
+<width>845</width>
+<height>717</height>
 <visible>true</visible>
 </initialWindow>
 </application>
