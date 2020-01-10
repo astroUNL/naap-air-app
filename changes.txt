@@ -1,3 +1,6 @@
+2020-01-10 - v1.0
+- Updated eight simulators for AP style.
+
 2020-01-03 - v0.5
 - Fixed multiple typos.
 - Enforced AP style on background pages: "Earth", "the sun", and "the moon".

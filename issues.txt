@@ -3,6 +3,10 @@
 
 *** Needs Fixing ***
 
+Problem: textfields in interactives on background pages are sometimes inaccessible. Example: the sexagesimal converted at the bottom of Basic Coordinates and Seasons / Units of Longitude and Latitude. This problem is intermittent.
+
+Other problem:
+
 Lab					Interactive or Sim			Problem
 ===					==================			=======
 The Rotating Sky			Locations of Objects in the Sky		Text on celestial sphere not rendered correctly (affects macOS only).
