@@ -10,10 +10,10 @@
     <ROW Property="ARPCOMMENTS" Value="This file installs the astro.unl.edu NAAP Labs program." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://astro.unl.edu"/>
     <ROW Property="Manufacturer" Value="AstroUNL"/>
-    <ROW Property="ProductCode" Value="1033:{B9E0CAFE-97F3-4099-9B2C-F4B6E370F3C5} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{30CC92DD-F9F0-48FC-A502-A636CE8BB5AC} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="NAAP Labs"/>
-    <ROW Property="ProductVersion" Value="1.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{5420CAD0-270F-472F-ABE5-357CFB8503BD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -78,6 +78,8 @@
     <ROW Directory="habitablezones_Dir" Directory_Parent="files_Dir" DefaultDir="HABITA~1|habitablezones"/>
     <ROW Directory="hr_Dir" Directory_Parent="files_Dir" DefaultDir="hr"/>
     <ROW Directory="hydrogen_Dir" Directory_Parent="files_Dir" DefaultDir="hydrogen"/>
+    <ROW Directory="icons.iconset_Dir" Directory_Parent="icons_Dir" DefaultDir="ICONS~1.ICO|icons.iconset"/>
+    <ROW Directory="icons_Dir" Directory_Parent="APPDIR" DefaultDir="icons"/>
     <ROW Directory="lps_Dir" Directory_Parent="files_Dir" DefaultDir="lps"/>
     <ROW Directory="motion1_Dir" Directory_Parent="files_Dir" DefaultDir="motion1"/>
     <ROW Directory="motion2_Dir" Directory_Parent="files_Dir" DefaultDir="motion2"/>
@@ -125,6 +127,7 @@
     <ROW Component="hrclassification.swf" ComponentId="{1FAC0DC9-60D7-4B12-8101-84E05D60DA34}" Directory_="background_6_Dir" Attributes="0" KeyPath="hrclassification.swf" Type="0"/>
     <ROW Component="hydrogen_atom.jpg" ComponentId="{A614D111-89B7-4293-BFD2-5C0A875646F7}" Directory_="animations_7_Dir" Attributes="0" KeyPath="hydrogen_atom.jpg" Type="0"/>
     <ROW Component="hydrogenabundances.swf" ComponentId="{886D3A90-D7C2-4F42-99C9-3D8EDACF1B4C}" Directory_="background_7_Dir" Attributes="0" KeyPath="hydrogenabundances.swf" Type="0"/>
+    <ROW Component="icon_128x128.png" ComponentId="{A653262A-C6FF-44CF-87BF-4B1C87D5678D}" Directory_="icons.iconset_Dir" Attributes="0" KeyPath="icon_128x128.png" Type="0"/>
     <ROW Component="lpsdetective.swf" ComponentId="{6A630464-64E3-47CF-9966-0A4ED7709B47}" Directory_="background_8_Dir" Attributes="0" KeyPath="lpsdetective.swf" Type="0"/>
     <ROW Component="main.swf" ComponentId="{F2284C3A-CD37-4DA2-A6EB-DF56FB1AFC4F}" Directory_="APPDIR" Attributes="0" KeyPath="main.swf" Type="0"/>
     <ROW Component="meridional_calculator.swf" ComponentId="{65008684-DE8F-43DE-8949-1AB30729BDDB}" Directory_="animations_11_Dir" Attributes="0" KeyPath="meridional_calculator.swf" Type="0"/>
@@ -383,6 +386,10 @@
     <ROW File="vspoverview.swf" Component_="vspccds.swf" FileName="VSP-OV~1.SWF|vsp-overview.swf" Attributes="0" SourcePath="..\output\NAAP Labs\files\vsp\background\vsp-overview.swf" SelfReg="false"/>
     <ROW File="vspperiod.swf" Component_="vspccds.swf" FileName="VSP-PE~1.SWF|vsp-period.swf" Attributes="0" SourcePath="..\output\NAAP Labs\files\vsp\background\vsp-period.swf" SelfReg="false"/>
     <ROW File="naap_vsp_sg.pdf" Component_="naap_vsp_sg.pdf" FileName="NAAP_V~1.PDF|naap_vsp_sg.pdf" Attributes="0" SourcePath="..\output\NAAP Labs\files\vsp\naap_vsp_sg.pdf" SelfReg="false"/>
+    <ROW File="icon_128x128.png" Component_="icon_128x128.png" FileName="ICON_1~1.PNG|icon_128x128.png" Attributes="0" SourcePath="..\output\NAAP Labs\icons\icons.iconset\icon_128x128.png" SelfReg="false"/>
+    <ROW File="icon_16x16.png" Component_="icon_128x128.png" FileName="ICON_1~2.PNG|icon_16x16.png" Attributes="0" SourcePath="..\output\NAAP Labs\icons\icons.iconset\icon_16x16.png" SelfReg="false"/>
+    <ROW File="icon_32x32.png" Component_="icon_128x128.png" FileName="ICON_3~1.PNG|icon_32x32.png" Attributes="0" SourcePath="..\output\NAAP Labs\icons\icons.iconset\icon_32x32.png" SelfReg="false"/>
+    <ROW File="icon_48x48.png" Component_="icon_128x128.png" FileName="ICON_4~1.PNG|icon_48x48.png" Attributes="0" SourcePath="..\output\NAAP Labs\icons\icons.iconset\icon_48x48.png" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -519,6 +526,7 @@
     <ROW Feature_="MainFeature" Component_="naap_ssm_sg.pdf"/>
     <ROW Feature_="MainFeature" Component_="vspccds.swf"/>
     <ROW Feature_="MainFeature" Component_="naap_vsp_sg.pdf"/>
+    <ROW Feature_="MainFeature" Component_="icon_128x128.png"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
